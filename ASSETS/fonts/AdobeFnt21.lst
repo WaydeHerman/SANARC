@@ -1,0 +1,89 @@
+%!Adobe-FontList 1.20
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/clairemeekel/Downloads/SANARC_website desing skeleton Folder 4/Document fonts/AdobeFnt21.lst
+FileLength:2068
+FileModTime:612962375
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:CircularStd-Bold
+FamilyName:Circular Std
+StyleName:Bold
+MenuName:Circular Std Bold
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Circular Std Bold
+WritingScript:Roman
+OutlineFileName:/Users/clairemeekel/Downloads/SANARC_website desing skeleton Folder 4/Document fonts/Circular Std Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:139168
+FileModTime:588474516
+NameArray:0,Mac,4,Circular Std Bold
+NameArray:0,Win,1,Circular Std Bold
+NameArray:0,Win,16,Circular Std
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:CircularStd-Book
+FamilyName:Circular Std
+StyleName:Book
+MenuName:Circular Std Book
+StyleBits:0
+WeightClass:450
+WidthClass:5
+AngleClass:0
+FullName:Circular Std Book
+WritingScript:Roman
+OutlineFileName:/Users/clairemeekel/Downloads/SANARC_website desing skeleton Folder 4/Document fonts/Circular Std Book.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:136616
+FileModTime:588604350
+NameArray:0,Mac,4,Circular Std Book
+NameArray:0,Win,1,Circular Std Book
+NameArray:0,Win,16,Circular Std
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-Regular
+FamilyName:Minion Pro
+StyleName:Regular
+MenuName:Minion Pro
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Minion Pro
+WritingScript:Roman
+OutlineFileName:/Users/clairemeekel/Downloads/SANARC_website desing skeleton Folder 4/Document fonts/MinionPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:218640
+FileModTime:603308038
+DesignSize:110
+NameArray:0,Mac,4,Minion Pro
+NameArray:0,Win,1,Minion Pro
+%EndFont
+

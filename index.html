@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, maximum-scale=1"
+/>
+<head>
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="icon" href="favicon.ico" />
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    const fb_logo =
+      "M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z";
+    const ut_logo =
+      "M54.6,27.3A27.3,27.3,0,1,1,27.3,0,27.4,27.4,0,0,1,54.6,27.3";
+    $(function () {
+      $(document).scroll(function () {
+        var $nav = $(".navbar-fixed-top");
+        $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+      });
+    });
+  </script>
+</head>
+<style type="text/css">
+  @font-face {
+    font-family: "Circular Std Bold";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Circular Std Bold"),
+      url("ASSETS/fonts/CircularStdBold.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "Circular Std Book";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Circular Std Book"),
+      url("ASSETS/fonts/CircularStdBook.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "Minion Pro";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Minion Pro"),
+      url("ASSETS/fonts/MinionPro-Regular.otf") format("opentype");
+  }
+
+  body {
+    font-family: "Circular Std Book";
+  }
+  /*
+  Header CSS Rules
+  */
+  .main-menubox {
+    display: none;
+  }
+
+  .header-img {
+    width: 160px;
+  }
+
+  .navbar-fixed-top {
+    background-color: #00edba !important;
+  }
+
+  .navbar-fixed-top.scrolled {
+    background-color: #fff !important;
+    transition: background-color 200ms linear;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    margin-top: 20px;
+    color: #0a1f8c;
+  }
+
+  .navbar-light .navbar-nav .nav-link:hover {
+    font-weight: bold;
+    color: #0a1f8c;
+  }
+
+  .navbar-light .navbar-nav .active > .nav-link {
+    color: #0a1f8c;
+    font-family: "Circular Std Bold";
+  }
+
+  .main-menu:hover .main-menubox {
+    display: block;
+  }
+
+  .dropdown-submenu {
+    position: relative;
+  }
+  .dropdown-submenu a::after {
+    transform: rotate(-90deg);
+    position: absolute;
+    right: 3px;
+    top: 40%;
+  }
+  .dropdown-submenu:hover .dropdown-menu,
+  .dropdown-submenu:focus .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute !important;
+    margin-top: -30px;
+    left: 100%;
+  }
+  @media (max-width: 992px) {
+    .dropdown-menu {
+      width: 50%;
+    }
+    .dropdown-menu .dropdown-submenu {
+      width: auto;
+    }
+
+    .dropdown-menu {
+      left: -131%;
+    }
+  }
+
+  .dropdown-submenu a::after {
+    right: 16px;
+    top: 42%;
+  }
+
+  .dropdown-item {
+    padding: 8px 18px;
+  }
+
+  .dropdown-item {
+    white-space: normal;
+  }
+
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    font-size: 14px;
+  }
+
+  .dropdown-item:focus,
+  .dropdown-item:hover {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #dcdcdc;
+  }
+
+  li.nav-item {
+    padding: 10px 20px;
+  }
+
+  /*
+  Covid Banner
+  */
+  .covid-banner-container {
+    padding-top: 135px;
+    font-size: 0.7em;
+    color: white;
+    background-color: #ff6633;
+    padding-bottom: 10px;
+  }
+
+  .covid-link {
+    color: #0a1f8c !important;
+    font-family: "Circular Std Bold";
+    text-decoration: underline !important;
+  }
+
+  /*
+  Home
+  */
+
+  .home {
+    background-image: url("ASSETS/images/home_banner_crop.png");
+    width: 100%;
+    height: auto;
+    background-size: cover;
+  }
+
+  .home-banner {
+    margin-top: 50px;
+    margin-bottom: 270px;
+  }
+
+  .read-more-btn img {
+    margin-top: 165px;
+    cursor: pointer;
+  }
+
+  .read-more-btn img:hover {
+    margin-top: 165px;
+    cursor: pointer;
+  }
+
+  .full-width-image {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+  }
+
+  .full-width-image img {
+    width: 100%;
+  }
+
+  /*
+  Products and Services
+  */
+  .products-and-services h2 {
+    padding: 20px;
+    color: #00edba;
+    font-family: "Circular Std Bold";
+  }
+
+  .products-and-services .list-group-item {
+    border: none;
+    padding-left: 0;
+    color: #0a1f8c;
+  }
+
+  .plus-icon {
+    width: 10px;
+    position: relative;
+    top: -2px;
+    margin-right: 10px;
+    color: #0a1f8c;
+    fill: #0a1f8c;
+  }
+
+  .catalogue img {
+    width: 180px;
+    cursor: pointer;
+  }
+  /*
+  vision
+  */
+  .vision {
+    margin-top: 145px;
+  }
+  .vision h1 {
+    padding: 20px;
+    font-family: "Circular Std Bold";
+  }
+
+  .vision-text {
+    padding-left: 10px;
+  }
+
+  .vision-img-container {
+    margin-top: 40px;
+    background-image: url("ASSETS/images/home_banner_crop.png");
+    width: 100%;
+    height: auto;
+    background-size: cover;
+  }
+
+  .vision-img {
+    height: 300px;
+  }
+  /*
+  How works
+  */
+  .how-works {
+    background-color: #00edba;
+    padding-bottom: 40px;
+  }
+
+  .how-works h1 {
+    padding: 20px;
+    font-family: "Circular Std Bold";
+  }
+
+  .how-works-text {
+    padding-left: 10px;
+  }
+
+  .how-works-img-container {
+    background-image: url("ASSETS/images/home_banner_crop.png");
+    width: 100%;
+    height: auto;
+    background-size: cover;
+  }
+
+  .how-works-img {
+    height: 300px;
+  }
+
+  /*
+  Disinfection
+  */
+  .disinfection {
+    margin-bottom: 145px;
+  }
+
+  .disinfection h1 {
+    padding: 20px;
+    font-family: "Circular Std Bold";
+  }
+
+  .disinfection-text {
+    padding-bottom: 45px;
+    padding-left: 0px !important;
+  }
+
+  .disinfection h3 {
+    padding: 20px;
+    font-family: "Circular Std Bold";
+    color: #0a1f8c;
+  }
+
+  .disinfection .list-group-item {
+    color: #0a1f8c;
+    border: none;
+  }
+
+  /*
+  Additional Products
+  */
+  .add-products {
+    margin-bottom: 45px;
+  }
+  .add-products h1 {
+    padding: 20px;
+    font-family: "Circular Std Bold";
+  }
+
+  .add-products-text {
+    margin-bottom: 30px;
+  }
+
+  .add-products .list-group-item {
+    font-size: 1.4em;
+    color: #0a1f8c;
+    border: none;
+  }
+
+  .add-products-catalogue-text {
+    display: inline-block;
+    margin-top: 25px;
+    margin-right: 15px;
+  }
+  /*
+  How differ
+  */
+  .how-differ {
+    background-color: #00edba;
+    padding-bottom: 40px;
+  }
+
+  .how-differ h1 {
+    padding: 20px;
+    font-family: "Circular Std Bold";
+  }
+
+  .how-differ-text {
+    padding-left: 10px;
+  }
+
+  /*
+  Treatment Procedure
+  */
+  .treatment-procedure {
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+  .treatment-procedure h1 {
+    padding: 20px;
+    font-family: "Circular Std Bold";
+  }
+
+  .treatment-procedure h2 {
+    font-family: "Circular Std Bold";
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .treatment-step {
+    margin: 0px;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+  }
+
+  .left-treatment {
+    color: white;
+    background-color: #0a1f8c;
+    height: 160px;
+    width: 100%;
+    border-radius: 70px 0px;
+    position: relative;
+  }
+
+  .right-treatment {
+    color: white;
+    background-color: #0a1f8c;
+    height: 160px;
+    width: 100%;
+    border-radius: 0px 70px;
+    position: relative;
+  }
+
+  .treatment-text-container {
+    margin: 0px;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+  }
+
+  .treatment-text {
+    color: #0a1f8c;
+    padding: 20px;
+  }
+
+  .treatment-procedure .row {
+    padding: 10px;
+  }
+
+  /*
+  Quote
+  */
+  .quote {
+    padding-bottom: 45px;
+    background-color: #c6f3eb;
+    padding-top: 35px;
+  }
+  .form-item {
+    margin-top: 10px;
+  }
+
+  .quote .list-group-item {
+    line-height: 1.2em;
+    background-color: white;
+    border: none;
+    color: #0a1f8c;
+    padding: 0px;
+    width: 160px;
+    padding-left: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+
+  .quote h5 {
+    color: #0a1f8c;
+    font-family: "Circular Std Bold";
+  }
+
+  .quote p {
+    color: #0a1f8c;
+  }
+
+  .quote .list-group {
+    margin-bottom: 25px;
+  }
+
+  .quote-expand {
+    cursor: pointer;
+    background-color: #00edba;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+  }
+
+  .quote-row {
+    margin-bottom: 10px;
+  }
+
+  .quote-row:last-of-type {
+    margin-bottom: 0px;
+  }
+
+  .quote-col {
+    background-color: #eafcf6;
+    color: #0a1f8c;
+    margin-left: 10px;
+  }
+  .quote-col:first-of-type {
+    margin-left: 0px;
+  }
+
+  .quote-col-headers {
+    font-family: "Circular Std Bold";
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    text-align: center;
+  }
+
+  .quote-col-item {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    text-align: center;
+  }
+
+  .plus-icon-quote {
+    width: 20px;
+    margin: auto;
+    text-anchor: middle;
+  }
+
+  .quote-tagline {
+    background-color: #00edba;
+    padding-top: 10px;
+  }
+
+  .quote-submit {
+    margin-top: 10px;
+  }
+
+  .quote-submit img {
+    width: 180px;
+    cursor: pointer;
+  }
+
+  .quote-info {
+    display: none;
+    width: 100%;
+  }
+
+  .quote-col {
+    display: inline-block;
+  }
+
+  .quote ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #0a1f8c;
+    opacity: 1; /* Firefox */
+  }
+
+  .quote :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #0a1f8c;
+  }
+
+  .quote ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #0a1f8c;
+  }
+  /*
+  Customers
+  */
+
+  .customers h1 {
+    font-family: "Circular Std Bold";
+    color: #0a1f8c;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+
+  .customer {
+    padding: 40px;
+    color: #0a1f8c;
+  }
+
+  .customer-logo {
+    width: 100%;
+  }
+
+  .customer-logo-0 {
+    top: 10px;
+    position: relative;
+  }
+
+  .customer-logo-1 {
+    top: -10px;
+    position: relative;
+  }
+  /*
+  Partners
+  */
+
+  .partners {
+    margin-bottom: 40px;
+  }
+  .partners h4 {
+    font-family: "Circular Std Bold";
+    color: #0a1f8c;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  .partners .column {
+    vertical-align: middle;
+    width: calc(100% / 6);
+    text-anchor: middle;
+  }
+
+  .partner-item {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 10px;
+  }
+
+  .partner-item-1 {
+    margin-top: 30px;
+  }
+  .partner-item-2 {
+    margin-top: 45px;
+  }
+  .partner-item-3 {
+    margin-top: 35px;
+  }
+  .partner-item-4 {
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 120px;
+  }
+  .partner-item-5 {
+    margin-top: 60px;
+  }
+
+  /*
+  Footer
+  */
+  .red {
+    color: red !important;
+  }
+
+  footer {
+    background-color: #00edba !important;
+    padding: 80px 0;
+  }
+  footer .footer-widget h4 {
+    margin-bottom: 30px;
+    font-family: "Circular Std Bold";
+    color: #0a1f8c;
+  }
+  footer .footer-widget {
+    color: #0a1f8c;
+  }
+  footer .contact-link {
+    display: inline-block;
+    font-family: "Circular Std Book";
+    color: #0a1f8c;
+  }
+  footer .footer-social ul {
+    padding-left: 0;
+  }
+  footer .footer-social ul li {
+    list-style: none;
+    float: left;
+    margin: 0 10px;
+    width: 35px;
+  }
+  footer .footer-social ul li:first-child {
+    padding-left: 0;
+    margin-left: 0;
+  }
+  footer .footer-social ul li a {
+    font-size: 20px;
+    color: #333;
+  }
+  footer .footer-social ul li a:hover {
+    color: red;
+  }
+
+  footer .opening-time li span .fa-times {
+    color: red;
+  }
+  footer .opening-time li strong {
+    color: red;
+  }
+  footer .media-body a {
+    color: #333;
+  }
+  footer .media-body a:hover {
+    color: red;
+  }
+  footer .media-body span {
+    color: #969696;
+  }
+
+  .social-icon-link {
+  }
+
+  .social-icon:hover {
+    width: 33px;
+  }
+
+  .footer-tagline {
+    margin-top: 80px;
+  }
+
+  /*
+  Utility
+  */
+  .custom-bold {
+    font-family: "Circular Std Bold";
+  }
+
+  .custom-italic {
+    font-style: italic;
+  }
+
+  .color-dark-blue {
+    color: #0a1f8c;
+  }
+
+  .color-turquoise {
+    color: #00edba;
+  }
+
+  .color-white {
+    color: #ffffff;
+  }
+</style>
+<body>
+  <header>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light fixed-top navbar-fixed-top"
+      id="mainNav"
+    >
+      <div class="container w-75">
+        <a class="navbar-brand js-scroll-trigger" href="index.html">
+          <h2></h2>
+          <img class="header-img" src="ASSETS/SANARC_for-Web_BLUE.png" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">About Sanarc</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Get a Quote</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="covid-banner-container">
+    <div class="container">
+      <div class="covid-banner text-center">
+        Stay informed! Visit the SA Department of Health’s website for COVID-19
+        updates: www.sacoronavirus.co.za for
+        <a
+          class="covid-link"
+          href="https://sacoronavirus.co.za/"
+          target="_blank"
+          >More information</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="home">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-7">
+          <div class="home-banner custom-bold">
+            <h1 class="color-turquoise">
+              For your peace of <tspan class="color-white">mind</tspan>
+            </h1>
+            <h4 class="color-white">
+              utilizing industry leading expertise and technology, to prevent
+              the spread of viruses
+            </h4>
+          </div>
+        </div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-3">
+          <a class="read-more-btn">
+            <img
+              src="ASSETS/covid-19/orange.svg"
+              onmouseover="covid_img_hover(this)"
+              onmouseout="covid_img_unhover(this)"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="products-and-services">
+    <div class="container">
+      <div class="row">
+        <h2 class="color-turquoise">
+          Our <tspan class="color-dark-blue">products + services</tspan>
+        </h2>
+      </div>
+      <div class="row color-dark-blue">
+        <div class="col-sm-4">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+              <tspan class="custom-bold">Service : </tspan>Electrostatic
+              spraying
+            </li>
+            <li class="list-group-item">
+              <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+              Additional products
+            </li>
+            <li class="list-group-item">
+              <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+              Environmental swabs
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+              Ozone purifier
+            </li>
+            <li class="list-group-item">
+              <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+              Ozone generator
+            </li>
+            <li class="list-group-item">
+              <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+              Misting tunnel
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+              Safety signage for covid awareness
+            </li>
+            <li class="list-group-item">
+              <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+              Sanitation stands
+            </li>
+            <li class="list-group-item">
+              <a class="catalogue">
+                <img
+                  src="ASSETS/covid-19/orange.svg"
+                  onmouseover="covid_img_hover(this)"
+                  onmouseout="covid_img_unhover(this)"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="vision">
+    <div class="container">
+      <div class="row">
+        <h1 class="color-turquoise custom-bold">
+          Our <tspan class="color-dark-blue">Vision</tspan>
+        </h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <h3 class="color-dark-blue vision-text">
+            To be the industry standard for Covid-19-related preventative
+            solutions specifically tailored to the education, residential,
+            recreational, hospitality and corporate sectors.
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="vision-img-container">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="vision-img"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="how-works">
+    <div class="container">
+      <div class="row">
+        <h1 class="color-white custom-bold">
+          How <tspan class="color-dark-blue">does it work?</tspan>
+        </h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <h3 class="color-dark-blue how-works-text">
+            Our Electrostatic Sprayers produce electrically charged spray
+            droplets which are carried to the targets in a high-speed air
+            stream.
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="how-works-img-container">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="how-works-img"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="disinfection">
+    <div class="container">
+      <div class="row">
+        <h1 class="color-turquoise custom-bold">
+          Sanarc <tspan class="color-dark-blue">Disinfection Service</tspan>
+        </h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <h3 class="color-dark-blue disinfection-text">
+            Our Electrostatic Sprayers produce electrically charged spray
+            droplets which are carried to the targets in a high-speed air
+            stream.
+          </h3>
+        </div>
+      </div>
+      <div class="row">
+        <h3>
+          Benefits of the service:
+        </h3>
+      </div>
+      <div class="row">
+        <div class="col-sm-10">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+              Extended kill of up to 14 days (on most surfaces)
+            </li>
+            <li class="list-group-item">
+              <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+              Kills and neutralizes 99.99% of bacteria and viruses
+            </li>
+            <li class="list-group-item">
+              <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+              Touchless disinfection
+            </li>
+            <li class="list-group-item">
+              <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+              Reach complex areas with 360 degree wrap arounddisinfection layer
+              Can be safely used on all surfaces including kitchenware, files,
+              technology, etc.
+            </li>
+            <li class="list-group-item">
+              <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+              Up to 8x faster than traditional sanitation services
+            </li>
+            <li class="list-group-item">
+              <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+              Can be safely used on all surfaces and appliances including
+              kitchenware, files, computers etc.
+            </li>
+            <li class="list-group-item">
+              <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+              Environment safe for occupation minutes after application
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="add-products">
+    <div class="container">
+      <div class="row">
+        <h1 class="color-turquoise">
+          Additional <tspan class="color-dark-blue">Products</tspan>
+        </h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <h3 class="color-dark-blue add-products-text">
+            In addition to providing a disinfection service, we offer a
+            comprehensive range of related products, including:
+          </h3>
+        </div>
+      </div>
+      <div class="row">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+            Environmental swabs
+          </li>
+          <li class="list-group-item">
+            <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+            Covid-19 safety signage
+          </li>
+          <li class="list-group-item">
+            <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+            Ozone Purifiers
+          </li>
+          <li class="list-group-item">
+            <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+            Sanitation Stands
+          </li>
+          <li class="list-group-item">
+            <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+            Misting Tunnels
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <p class="add-products-catalogue-text">
+            For more information, please see our product catalogue
+          </p>
+          <a class="catalogue">
+            <img
+              src="ASSETS/covid-19/orange.svg"
+              onmouseover="covid_img_hover(this)"
+              onmouseout="covid_img_unhover(this)"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="how-differ">
+    <div class="container">
+      <div class="row">
+        <h1 class="color-white custom-bold">
+          How <tspan class="color-dark-blue">does our service differ?</tspan>
+        </h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <h3 class="color-dark-blue how-differ-text">
+            Thanks to our patented sanitizer, our service offers a residual
+            effectiveness of up to 14 days; when combined with ESS technology,
+            our preventative package is not only far less time- consuming, but
+            also, far more comprehensive in its preventative surface coverage.
+            Our advanced techniques are guided by 25 years of industry-specific
+            knowledge.
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="treatment-procedure">
+    <div class="container">
+      <div class="row">
+        <h1 class="color-turquoise">
+          Recommended <tspan class="color-dark-blue">treatment procedure</tspan>
+        </h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-5">
+          <div class="left-treatment">
+            <div class="treatment-step">
+              <h2>
+                Step 1: <tspan class="color-turquoise">ESS spraying</tspan>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="treatment-text-container">
+            <p class="treatment-text">
+              Sanarc will do a full preventative treatment which encompasses a
+              full coverage sanitation of the premises by means of ESS
+              technology.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-5">
+          <div class="treatment-text-container">
+            <p class="treatment-text">
+              After completing the sanitation treatment, we provide a variety of
+              safety and educational signs.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="right-treatment">
+            <div class="treatment-step">
+              <h2>Step 2: <tspan class="color-turquoise">Signage</tspan></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-5">
+          <div class="left-treatment">
+            <div class="treatment-step">
+              <h2>
+                Step 3: <tspan class="color-turquoise">Sanitation stands</tspan>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="treatment-text-container">
+            <p class="treatment-text">
+              Hands-Free Sanitizing stands will be placed in areas which contain
+              high human congregation, to ensure that hand sanitizer is readily
+              available.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-5">
+          <div class="treatment-text-container">
+            <p class="treatment-text">
+              As a further means of precaution, ‘Ozone Technology’ can be placed
+              in high- traffic areas, in order to decontaminate the surrounding
+              air.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="right-treatment">
+            <div class="treatment-step">
+              <h2>Step 4: <tspan class="color-turquoise">Ozone</tspan></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-5">
+          <div class="left-treatment">
+            <div class="treatment-step">
+              <h2>
+                Step 5:
+                <tspan class="color-turquoise"
+                  >External environmental swab</tspan
+                >
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="treatment-text-container">
+            <p class="treatment-text">
+              As a final measure to provide credible evidence that your
+              environment is Covid- 19 free, one can opt for a swabbing test
+              which we will complete, and send off to a laboratory for testing.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="quote">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-sm-5">
+              <h5>What do you need?</h5>
+              <h5>We can give you a quote:</h5>
+              <p>choose the size of your premise:</p>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+                  0-500 m<sup>2</sup>
+                </li>
+                <li class="list-group-item">
+                  <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+                  500-1000 m<sup>2</sup>
+                </li>
+                <li class="list-group-item">
+                  <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+                  1000 m<sup>2</sup> -over
+                </li>
+              </ul>
+            </div>
+            <div class="custom-expand-col" onclick="custom_expand_click(this)">
+              <div class="quote-expand">
+                <img
+                  class="plus-icon-quote"
+                  src="ASSETS/icons/plus-solid.svg"
+                />
+                <div class="quote-info">
+                  <div class="quote-row">
+                    <div class="quote-col">
+                      <div class="quote-col-headers">
+                        Description
+                      </div>
+                    </div>
+                    <div class="quote-col">
+                      <div class="quote-col-headers">
+                        Rates
+                      </div>
+                    </div>
+                    <div class="quote-col">
+                      <div class="quote-col-headers">
+                        Total (Rand)
+                      </div>
+                    </div>
+                  </div>
+                  <div class="quote-row">
+                    <div class="quote-col">
+                      <div class="quote-col-item">
+                        minimum charge
+                      </div>
+                    </div>
+                    <div class="quote-col">
+                      <div class="quote-col-item">
+                        inclusive of call out fee
+                      </div>
+                    </div>
+                    <div class="quote-col">
+                      <div class="quote-col-item">
+                        R3000
+                      </div>
+                    </div>
+                  </div>
+                  <div class="quote-row">
+                    <div class="quote-col">
+                      <div class="quote-col-item">
+                        pricing structure
+                      </div>
+                    </div>
+                    <div class="quote-col">
+                      <div class="quote-col-item">R7.50 per m<sup>2</sup></div>
+                    </div>
+                    <div class="quote-col">
+                      <div class="quote-col-item">
+                        = (m<sup>2</sup>) x R7,50
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-10"></div>
+      </div>
+      <div class="row">
+        <form>
+          <div class="row">
+            <div class="col-sm-2 form-item">
+              <input
+                type="text"
+                class="form-control"
+                id="initials"
+                placeholder="Initials*"
+                name="initials"
+              />
+            </div>
+            <div class="col-sm-4 form-item">
+              <input
+                type="text"
+                class="form-control"
+                id="fname"
+                placeholder="First name*"
+                name="fname"
+              />
+            </div>
+            <div class="col-sm-4 form-item">
+              <input
+                type="text"
+                class="form-control"
+                id="lname"
+                placeholder="Last name*"
+                name="lname"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-10 form-item">
+              <input
+                type="text"
+                class="form-control"
+                id="company"
+                placeholder="Company name*"
+                name="company"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-10 form-item">
+              <input
+                type="tel"
+                class="form-control"
+                id="phone"
+                placeholder="Phone number*"
+                name="phone"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-10 form-item">
+              <input
+                type="text"
+                class="form-control"
+                id="email"
+                placeholder="Email*"
+                name="email"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3 form-item"></div>
+            <div class="col-sm-3 form-item"></div>
+            <div class="col-sm-3 form-item">
+              <a class="quote-submit">
+                <img
+                  src="ASSETS/covid-19/orange.svg"
+                  onmouseover="covid_img_hover(this)"
+                  onmouseout="covid_img_unhover(this)"
+                />
+              </a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="quote-tagline">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10">
+          <h1 class="custom-bold color-dark-blue">
+            for your peace of <tspan class="color-white">mind</tspan>
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="customers">
+    <div class="container">
+      <div class="row">
+        <h1 class="text-center">What our customers think</h1>
+      </div>
+      <div class="row customer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-2">
+          <img
+            class="customer-logo customer-logo-0"
+            src="ASSETS/customers/CDeCerff.png"
+          />
+        </div>
+        <div class="col-sm-6">
+          <div class="customer-quote">
+            <p>
+              “We highly recommend the service.”
+            </p>
+            <p class="custom-bold custom-italic">- C De Cerff and Associates</p>
+          </div>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+      <div class="row customer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-2">
+          <img
+            class="customer-logo customer-logo-1"
+            src="ASSETS/customers/Warwick.png"
+          />
+        </div>
+        <div class="col-sm-6">
+          <div class="customer-quote">
+            <p>
+              “The cost of the treatment was excellent value, and the process
+              itself is non-intrusive and extremely efficient.”
+            </p>
+            <p class="custom-bold custom-italic">- Warwick Wealth</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="partners">
+    <div class="container">
+      <div class="row">
+        <h4 class="text-center">PARTNERS</h4>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img
+            class="partner-item partner-item-0"
+            src="ASSETS/partners/HYCHEM.png"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="partner-item partner-item-1"
+            src="ASSETS/partners/ACS.png"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="partner-item partner-item-2"
+            src="ASSETS/partners/NOSA.png"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="partner-item partner-item-3"
+            src="ASSETS/partners/ESS.png"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="partner-item partner-item-4"
+            src="ASSETS/partners/BIOZONE.png"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="partner-item partner-item-5"
+            src="ASSETS/partners/TouchPoint.png"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="footer-tagline">
+            <h1 class="custom-bold color-dark-blue">
+              For your peace of <tspan class="color-white">mind</tspan>
+            </h1>
+          </div>
+        </div>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3">
+          <div class="footer-widget">
+            <h4>Contact Info</h4>
+            <div class="footer-widget-content">
+              <div>
+                E-mail:
+                <a href="mailto:info@sanarc.co.za" class="contact-link"
+                  >info@sanarc.co.za</a
+                >
+              </div>
+              <div>
+                Tel:
+                <a href="tel:0642687761" class="contact-link">064 268 7761</a>
+              </div>
+              <div class="footer-social">
+                <ul>
+                  <li>
+                    <a
+                      class="social-icon-link"
+                      href="https://www.facebook.com/Sanarcsolutions/"
+                      target="_blank"
+                      ><img
+                        class="social-icon"
+                        src="ASSETS/contact/facebook.svg"
+                        width="30px"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      class="social-icon-link"
+                      href="https://www.instagram.com/sanarcsolutions/ "
+                      target="_blank"
+                      ><img
+                        class="social-icon"
+                        src="ASSETS/contact/instagram.svg"
+                        width="30px"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      class="social-icon-link"
+                      href="https://www.youtube.com/channel/UCuiN1tdmZZUjBSuo4A9c-NQ"
+                      target="_blank"
+                      ><img
+                        class="social-icon"
+                        src="ASSETS/contact/youtube.svg"
+                        width="30px"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const state = {};
+    function covid_img_hover(element) {
+      element.setAttribute("src", "ASSETS/covid-19/white.svg");
+    }
+
+    function covid_img_unhover(element) {
+      element.setAttribute("src", "ASSETS/covid-19/orange.svg");
+    }
+
+    function custom_expand_click(element) {
+      if (element.classList.contains("custom-expanded")) {
+        element.classList.toggle("custom-expanded");
+        document.querySelector(".plus-icon-quote").style.display = "block";
+        element.style.width = state.width + "px";
+        document.querySelector(".quote-info").style.display = "none";
+        console.log("WAS expanded");
+      } else {
+        console.log("NOW expanding");
+        element.classList.toggle("custom-expanded");
+        state.width = element.offsetWidth;
+        state.height = element.offsetHeight;
+        state.parentWidth = element.parentElement.offsetWidth;
+        state.siblingWidth =
+          element.previousSibling.previousSibling.offsetWidth;
+        var targetWidth = state.parentWidth - state.siblingWidth;
+        element.style.width = targetWidth + "px";
+        var columns = document.querySelectorAll(".quote-col");
+        var columnWidth = Math.floor((targetWidth - 50) / 3);
+        var columnHeight = Math.floor((state.height - 40) / 3);
+        columns.forEach(function (v, i) {
+          console.log("columns[i]", columns[i].style.width);
+          columns[i].style.width = columnWidth + "px";
+          columns[i].style.height = columnHeight + "px";
+          console.log("columns[i]", columns[i].style.width);
+        });
+
+        console.log("element width", state.width);
+        console.log("element height", state.height);
+        console.log("siblingWidth", state.siblingWidth);
+        console.log("parentWidth", state.parentWidth);
+
+        document.querySelector(".plus-icon-quote").style.display = "none";
+        document.querySelector(".quote-info").style.display = "block";
+      }
+    }
+  </script>
+</body>
