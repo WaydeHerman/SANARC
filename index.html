@@ -472,6 +472,14 @@
   Quote
   */
   .quote {
+    background-image: url("ASSETS/quote/shape.svg");
+    width: 100%;
+    height: 760px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  .quote {
     padding-bottom: 45px;
     background-color: #c6f3eb;
     padding-top: 102px;
@@ -490,7 +498,7 @@
 
   .quote .list-group-item {
     line-height: 1.2em;
-    background-color: white;
+    background-color: transparent !important;
     border: none;
     color: #0a1f8c;
     padding: 0px;
@@ -498,6 +506,10 @@
     padding-left: 5px;
     margin-bottom: 15px;
     cursor: pointer;
+  }
+
+  .quote .list-group-item:hover {
+    background-color: #fff !important;
   }
 
   .quote h5 {
@@ -565,16 +577,17 @@
   }
 
   .quote-tagline {
-    background-color: #00edba;
-    padding-top: 108px;
+    position: relative;
+    top: 100px;
   }
 
   .quote-submit {
     margin-top: 10px;
+    float: right;
   }
 
   .quote-submit img {
-    width: 190px;
+    width: 100px;
     cursor: pointer;
   }
 
@@ -1396,27 +1409,17 @@
             <div class="col-sm-4 form-item">
               <a class="quote-submit">
                 <img
-                  src="ASSETS/covid-19/orange.svg"
-                  onmouseover="covid_img_hover(this)"
-                  onmouseout="covid_img_unhover(this)"
+                  src="ASSETS/quote/green.svg"
+                  onmouseover="send_img_hover(this)"
+                  onmouseout="send_img_unhover(this)"
                 />
               </a>
             </div>
           </div>
         </form>
       </div>
-    </div>
-  </div>
 
-  <div class="quote-shape">
-    <div class="container-fluid">
-      <img src="ASSETS/quote/shape.svg" />
-    </div>
-  </div>
-
-  <div class="quote-tagline">
-    <div class="container w-75">
-      <div class="row">
+      <div class="row quote-tagline">
         <div class="col-sm-10">
           <h1 class="custom-bold color-dark-blue">
             for your peace of <tspan class="color-white">mind</tspan>
@@ -1633,6 +1636,14 @@
 
     function catalogue_img_unhover(element) {
       element.setAttribute("src", "ASSETS/catalogue/blue.svg");
+    }
+
+    function send_img_hover(element) {
+      element.setAttribute("src", "ASSETS/quote/white.svg");
+    }
+
+    function send_img_unhover(element) {
+      element.setAttribute("src", "ASSETS/quote/green.svg");
     }
 
     function custom_expand_click(element) {
