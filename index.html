@@ -68,7 +68,7 @@
   }
 
   .header-img {
-    width: 160px;
+    width: 180px;
   }
 
   .navbar-fixed-top {
@@ -161,7 +161,7 @@
   Covid Banner
   */
   .covid-banner-container {
-    padding-top: 135px;
+    padding-top: 145px;
     font-size: 0.7em;
     color: white;
     background-color: #ff6633;
@@ -190,6 +190,10 @@
     margin-bottom: 270px;
   }
 
+  .col-read-more {
+    width: 200px;
+  }
+
   .read-more-btn img {
     margin-top: 165px;
     cursor: pointer;
@@ -214,6 +218,9 @@
   /*
   Products and Services
   */
+  .products-and-services {
+    margin-top: 45px;
+  }
   .products-and-services h2 {
     padding: 20px;
     color: #00edba;
@@ -243,7 +250,7 @@
   vision
   */
   .vision {
-    margin-top: 145px;
+    margin-top: 50px;
   }
   .vision h1 {
     padding: 20px;
@@ -271,6 +278,7 @@
   .how-works {
     background-color: #00edba;
     padding-bottom: 40px;
+    padding-top: 20px;
   }
 
   .how-works h1 {
@@ -297,7 +305,8 @@
   Disinfection
   */
   .disinfection {
-    margin-bottom: 145px;
+    margin-bottom: 50px;
+    margin-top: 50px;
   }
 
   .disinfection h1 {
@@ -346,6 +355,7 @@
     display: inline-block;
     margin-top: 25px;
     margin-right: 15px;
+    color: #0a1f8c;
   }
   /*
   How differ
@@ -356,6 +366,7 @@
   }
 
   .how-differ h1 {
+    margin-top: 50px;
     padding: 20px;
     font-family: "Circular Std Bold";
   }
@@ -395,7 +406,7 @@
   .left-treatment {
     color: white;
     background-color: #0a1f8c;
-    height: 160px;
+    height: 200px;
     width: 100%;
     border-radius: 70px 0px;
     position: relative;
@@ -404,7 +415,7 @@
   .right-treatment {
     color: white;
     background-color: #0a1f8c;
-    height: 160px;
+    height: 200px;
     width: 100%;
     border-radius: 0px 70px;
     position: relative;
@@ -435,10 +446,18 @@
   .quote {
     padding-bottom: 45px;
     background-color: #c6f3eb;
-    padding-top: 35px;
+    padding-top: 102px;
   }
   .form-item {
     margin-top: 10px;
+  }
+
+  .quote input[type="text"],
+  .quote input[type="tel"] {
+    color: #0a1f8c;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
   }
 
   .quote .list-group-item {
@@ -519,7 +538,7 @@
 
   .quote-tagline {
     background-color: #00edba;
-    padding-top: 10px;
+    padding-top: 108px;
   }
 
   .quote-submit {
@@ -527,7 +546,7 @@
   }
 
   .quote-submit img {
-    width: 180px;
+    width: 190px;
     cursor: pointer;
   }
 
@@ -543,7 +562,7 @@
   .quote ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #0a1f8c;
-    opacity: 1; /* Firefox */
+    opacity: 0.6; /* Firefox */
   }
 
   .quote :-ms-input-placeholder {
@@ -554,6 +573,12 @@
   .quote ::-ms-input-placeholder {
     /* Microsoft Edge */
     color: #0a1f8c;
+  }
+
+  .quote-shape .container-fluid {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    background-color: #c6f3eb;
   }
   /*
   Customers
@@ -647,6 +672,7 @@
   }
   footer .footer-widget {
     color: #0a1f8c;
+    margin-left: 20px;
   }
   footer .contact-link {
     display: inline-block;
@@ -749,28 +775,28 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html"
+              <a class="nav-link" href="#covid-banner"
                 >Home <span class="sr-only">(current)</span></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">About Sanarc</a>
+              <a class="nav-link" href="#disinfection">About Sanarc</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Products</a>
+              <a class="nav-link" href="#add-products">Products</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Get a Quote</a>
+              <a class="nav-link" href="#quote">Get a Quote</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
-  <div class="covid-banner-container">
+  <div class="covid-banner-container" id="covid-banner">
     <div class="container">
       <div class="covid-banner text-center">
         Stay informed! Visit the SA Department of Health’s website for COVID-19
@@ -785,10 +811,10 @@
     </div>
   </div>
 
-  <div class="home">
+  <div class="home" id="home">
     <div class="container">
       <div class="row">
-        <div class="col-sm-7">
+        <div class="col-sm-6">
           <div class="home-banner custom-bold">
             <h1 class="color-turquoise">
               For your peace of <tspan class="color-white">mind</tspan>
@@ -799,8 +825,8 @@
             </h4>
           </div>
         </div>
-        <div class="col-sm-2"></div>
-        <div class="col-sm-3">
+        <div class="col-sm-3"></div>
+        <div class="col-read-more">
           <a class="read-more-btn">
             <img
               src="ASSETS/covid-19/orange.svg"
@@ -821,7 +847,7 @@
         </h2>
       </div>
       <div class="row color-dark-blue">
-        <div class="col-sm-4">
+        <div class="col-sm-3">
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
               <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
@@ -838,7 +864,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-3">
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
               <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
@@ -854,7 +880,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-3">
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
               <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
@@ -887,7 +913,7 @@
         </h1>
       </div>
       <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-6">
           <h3 class="color-dark-blue vision-text">
             To be the industry standard for Covid-19-related preventative
             solutions specifically tailored to the education, residential,
@@ -913,7 +939,7 @@
         </h1>
       </div>
       <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-12">
           <h3 class="color-dark-blue how-works-text">
             Our Electrostatic Sprayers produce electrically charged spray
             droplets which are carried to the targets in a high-speed air
@@ -926,12 +952,21 @@
   <div class="how-works-img-container">
     <div class="container-fluid">
       <div class="row">
-        <div class="how-works-img"></div>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/Cp8i40AuXSw"
+            frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="disinfection">
+  <div class="disinfection" id="disinfection">
     <div class="container">
       <div class="row">
         <h1 class="color-turquoise custom-bold">
@@ -939,7 +974,7 @@
         </h1>
       </div>
       <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-6">
           <h3 class="color-dark-blue disinfection-text">
             Our Electrostatic Sprayers produce electrically charged spray
             droplets which are carried to the targets in a high-speed air
@@ -992,7 +1027,7 @@
     </div>
   </div>
 
-  <div class="add-products">
+  <div class="add-products" id="add-products">
     <div class="container">
       <div class="row">
         <h1 class="color-turquoise">
@@ -1000,7 +1035,7 @@
         </h1>
       </div>
       <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-6">
           <h3 class="color-dark-blue add-products-text">
             In addition to providing a disinfection service, we offer a
             comprehensive range of related products, including:
@@ -1056,7 +1091,7 @@
         </h1>
       </div>
       <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-6">
           <h3 class="color-dark-blue how-differ-text">
             Thanks to our patented sanitizer, our service offers a residual
             effectiveness of up to 14 days; when combined with ESS technology,
@@ -1078,7 +1113,7 @@
         </h1>
       </div>
       <div class="row">
-        <div class="col-sm-5">
+        <div class="col-sm-6">
           <div class="left-treatment">
             <div class="treatment-step">
               <h2>
@@ -1087,7 +1122,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-5">
+        <div class="col-sm-6">
           <div class="treatment-text-container">
             <p class="treatment-text">
               Sanarc will do a full preventative treatment which encompasses a
@@ -1096,10 +1131,9 @@
             </p>
           </div>
         </div>
-        <div class="col-sm-2"></div>
       </div>
       <div class="row">
-        <div class="col-sm-5">
+        <div class="col-sm-6">
           <div class="treatment-text-container">
             <p class="treatment-text">
               After completing the sanitation treatment, we provide a variety of
@@ -1107,17 +1141,16 @@
             </p>
           </div>
         </div>
-        <div class="col-sm-5">
+        <div class="col-sm-6">
           <div class="right-treatment">
             <div class="treatment-step">
               <h2>Step 2: <tspan class="color-turquoise">Signage</tspan></h2>
             </div>
           </div>
         </div>
-        <div class="col-sm-2"></div>
       </div>
       <div class="row">
-        <div class="col-sm-5">
+        <div class="col-sm-6">
           <div class="left-treatment">
             <div class="treatment-step">
               <h2>
@@ -1126,7 +1159,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-5">
+        <div class="col-sm-6">
           <div class="treatment-text-container">
             <p class="treatment-text">
               Hands-Free Sanitizing stands will be placed in areas which contain
@@ -1135,10 +1168,9 @@
             </p>
           </div>
         </div>
-        <div class="col-sm-2"></div>
       </div>
       <div class="row">
-        <div class="col-sm-5">
+        <div class="col-sm-6">
           <div class="treatment-text-container">
             <p class="treatment-text">
               As a further means of precaution, ‘Ozone Technology’ can be placed
@@ -1147,17 +1179,16 @@
             </p>
           </div>
         </div>
-        <div class="col-sm-5">
+        <div class="col-sm-6">
           <div class="right-treatment">
             <div class="treatment-step">
               <h2>Step 4: <tspan class="color-turquoise">Ozone</tspan></h2>
             </div>
           </div>
         </div>
-        <div class="col-sm-2"></div>
       </div>
       <div class="row">
-        <div class="col-sm-5">
+        <div class="col-sm-6">
           <div class="left-treatment">
             <div class="treatment-step">
               <h2>
@@ -1169,7 +1200,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-5">
+        <div class="col-sm-6">
           <div class="treatment-text-container">
             <p class="treatment-text">
               As a final measure to provide credible evidence that your
@@ -1178,12 +1209,11 @@
             </p>
           </div>
         </div>
-        <div class="col-sm-2"></div>
       </div>
     </div>
   </div>
 
-  <div class="quote">
+  <div class="quote" id="quote">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
@@ -1337,7 +1367,7 @@
           <div class="row">
             <div class="col-sm-3 form-item"></div>
             <div class="col-sm-3 form-item"></div>
-            <div class="col-sm-3 form-item">
+            <div class="col-sm-4 form-item">
               <a class="quote-submit">
                 <img
                   src="ASSETS/covid-19/orange.svg"
@@ -1349,6 +1379,12 @@
           </div>
         </form>
       </div>
+    </div>
+  </div>
+
+  <div class="quote-shape">
+    <div class="container-fluid">
+      <img src="ASSETS/quote/shape.svg" />
     </div>
   </div>
 
@@ -1370,7 +1406,6 @@
         <h1 class="text-center">What our customers think</h1>
       </div>
       <div class="row customer">
-        <div class="col-sm-2"></div>
         <div class="col-sm-2">
           <img
             class="customer-logo customer-logo-0"
@@ -1388,7 +1423,6 @@
         <div class="col-sm-2"></div>
       </div>
       <div class="row customer">
-        <div class="col-sm-2"></div>
         <div class="col-sm-2">
           <img
             class="customer-logo customer-logo-1"
@@ -1454,7 +1488,7 @@
     </div>
   </div>
 
-  <footer class="footer">
+  <footer class="footer" id="contact">
     <div class="container">
       <div class="row">
         <div class="col-sm-6">
@@ -1523,6 +1557,38 @@
     </div>
   </footer>
   <script>
+    /*
+    Username: julianlancaster100@gmail.com
+     Password: Lola@5656
+    */
+    $('[href="#disinfection"]').click(function (e) {
+      e.preventDefault();
+      $("html,body").animate({
+        scrollTop: $("#disinfection").offset().top - $("#mainNav").height() + 1,
+      });
+    });
+
+    $('[href="#add-products"]').click(function (e) {
+      e.preventDefault();
+      $("html,body").animate({
+        scrollTop: $("#add-products").offset().top - $("#mainNav").height() + 1,
+      });
+    });
+
+    $('[href="#quote"]').click(function (e) {
+      e.preventDefault();
+      $("html,body").animate({
+        scrollTop: $("#quote").offset().top - $("#mainNav").height() + 1,
+      });
+    });
+
+    $('[href="#contact"]').click(function (e) {
+      e.preventDefault();
+      $("html,body").animate({
+        scrollTop: $("#contact").offset().top - $("#mainNav").height() + 1,
+      });
+    });
+
     const state = {};
     function covid_img_hover(element) {
       element.setAttribute("src", "ASSETS/covid-19/white.svg");
