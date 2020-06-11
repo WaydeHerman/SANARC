@@ -90,6 +90,17 @@
     color: #0a1f8c;
   }
 
+  .navbar-light .navbar-nav .nav-link:visited {
+    color: #0a1f8c;
+    font-family: "Circular Std Bold";
+    opacity: 1;
+  }
+
+  .navbar-light .navbar-nav .nav-link:active {
+    color: #0a1f8c;
+    opacity: 1;
+  }
+
   .navbar-light .navbar-nav .active > .nav-link {
     color: #0a1f8c;
     font-family: "Circular Std Bold";
@@ -161,11 +172,11 @@
   Covid Banner
   */
   .covid-banner-container {
-    padding-top: 145px;
-    font-size: 0.7em;
+    padding-top: 150px;
+    font-size: 0.73em;
     color: white;
     background-color: #ff6633;
-    padding-bottom: 10px;
+    padding-bottom: 16px;
   }
 
   .covid-link {
@@ -192,6 +203,7 @@
 
   .col-read-more {
     width: 200px;
+    margin-left: 30px;
   }
 
   .read-more-btn img {
@@ -242,9 +254,16 @@
     fill: #0a1f8c;
   }
 
-  .catalogue img {
-    width: 180px;
+  .products-and-services .catalogue {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+  }
+
+  .products-and-services .catalogue img {
+    width: 200px;
     cursor: pointer;
+    border: 1px solid #0a1f8c;
   }
   /*
   vision
@@ -263,14 +282,14 @@
 
   .vision-img-container {
     margin-top: 40px;
-    background-image: url("ASSETS/images/home_banner_crop.png");
+    background-image: url("ASSETS/images/vision_banner_cropped.png");
     width: 100%;
     height: auto;
     background-size: cover;
   }
 
   .vision-img {
-    height: 300px;
+    height: 520px;
   }
   /*
   How works
@@ -356,6 +375,15 @@
     margin-top: 25px;
     margin-right: 15px;
     color: #0a1f8c;
+  }
+
+  .add-products .catalogue {
+  }
+
+  .add-products .catalogue img {
+    width: 200px;
+    cursor: pointer;
+    border: 1px solid #0a1f8c;
   }
   /*
   How differ
@@ -774,10 +802,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#covid-banner"
-                >Home <span class="sr-only">(current)</span></a
-              >
+            <li class="nav-item">
+              <a class="nav-link" href="#covid-banner">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#disinfection">About Sanarc</a>
@@ -797,7 +823,7 @@
     </nav>
   </header>
   <div class="covid-banner-container" id="covid-banner">
-    <div class="container">
+    <div class="container w-75">
       <div class="covid-banner text-center">
         Stay informed! Visit the SA Department of Health’s website for COVID-19
         updates: www.sacoronavirus.co.za for
@@ -812,7 +838,7 @@
   </div>
 
   <div class="home" id="home">
-    <div class="container">
+    <div class="container w-75">
       <div class="row">
         <div class="col-sm-6">
           <div class="home-banner custom-bold">
@@ -840,7 +866,7 @@
   </div>
 
   <div class="products-and-services">
-    <div class="container">
+    <div class="container w-75">
       <div class="row">
         <h2 class="color-turquoise">
           Our <tspan class="color-dark-blue">products + services</tspan>
@@ -868,8 +894,20 @@
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
               <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+              Safety signage for covid awareness
+            </li>
+            <li class="list-group-item">
+              <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
+              Sanitation stands
+            </li>
+            <li class="list-group-item">
+              <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
               Ozone purifier
             </li>
+          </ul>
+        </div>
+        <div class="col-sm-3">
+          <ul class="list-group list-group-flush">
             <li class="list-group-item">
               <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
               Ozone generator
@@ -881,41 +919,29 @@
           </ul>
         </div>
         <div class="col-sm-3">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
-              Safety signage for covid awareness
-            </li>
-            <li class="list-group-item">
-              <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
-              Sanitation stands
-            </li>
-            <li class="list-group-item">
-              <a class="catalogue">
-                <img
-                  src="ASSETS/covid-19/orange.svg"
-                  onmouseover="covid_img_hover(this)"
-                  onmouseout="covid_img_unhover(this)"
-                />
-              </a>
-            </li>
-          </ul>
+          <a class="catalogue">
+            <img
+              src="ASSETS/catalogue/blue.svg"
+              onmouseover="catalogue_img_hover(this)"
+              onmouseout="catalogue_img_unhover(this)"
+            />
+          </a>
         </div>
       </div>
     </div>
   </div>
 
   <div class="vision">
-    <div class="container">
+    <div class="container w-75">
       <div class="row">
         <h1 class="color-turquoise custom-bold">
           Our <tspan class="color-dark-blue">Vision</tspan>
         </h1>
       </div>
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-10">
           <h3 class="color-dark-blue vision-text">
-            To be the industry standard for Covid-19-related preventative
+            To be the industry standard for Covid-19 related preventative
             solutions specifically tailored to the education, residential,
             recreational, hospitality and corporate sectors.
           </h3>
@@ -932,14 +958,14 @@
   </div>
 
   <div class="how-works">
-    <div class="container">
+    <div class="container w-75">
       <div class="row">
         <h1 class="color-white custom-bold">
           How <tspan class="color-dark-blue">does it work?</tspan>
         </h1>
       </div>
       <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-10">
           <h3 class="color-dark-blue how-works-text">
             Our Electrostatic Sprayers produce electrically charged spray
             droplets which are carried to the targets in a high-speed air
@@ -967,14 +993,14 @@
   </div>
 
   <div class="disinfection" id="disinfection">
-    <div class="container">
+    <div class="container w-75">
       <div class="row">
         <h1 class="color-turquoise custom-bold">
           Sanarc <tspan class="color-dark-blue">Disinfection Service</tspan>
         </h1>
       </div>
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-10">
           <h3 class="color-dark-blue disinfection-text">
             Our Electrostatic Sprayers produce electrically charged spray
             droplets which are carried to the targets in a high-speed air
@@ -1028,14 +1054,14 @@
   </div>
 
   <div class="add-products" id="add-products">
-    <div class="container">
+    <div class="container w-75">
       <div class="row">
         <h1 class="color-turquoise">
           Additional <tspan class="color-dark-blue">Products</tspan>
         </h1>
       </div>
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-10">
           <h3 class="color-dark-blue add-products-text">
             In addition to providing a disinfection service, we offer a
             comprehensive range of related products, including:
@@ -1073,9 +1099,9 @@
           </p>
           <a class="catalogue">
             <img
-              src="ASSETS/covid-19/orange.svg"
-              onmouseover="covid_img_hover(this)"
-              onmouseout="covid_img_unhover(this)"
+              src="ASSETS/catalogue/blue.svg"
+              onmouseover="catalogue_img_hover(this)"
+              onmouseout="catalogue_img_unhover(this)"
             />
           </a>
         </div>
@@ -1084,14 +1110,14 @@
   </div>
 
   <div class="how-differ">
-    <div class="container">
+    <div class="container w-75">
       <div class="row">
         <h1 class="color-white custom-bold">
           How <tspan class="color-dark-blue">does our service differ?</tspan>
         </h1>
       </div>
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-10">
           <h3 class="color-dark-blue how-differ-text">
             Thanks to our patented sanitizer, our service offers a residual
             effectiveness of up to 14 days; when combined with ESS technology,
@@ -1106,7 +1132,7 @@
   </div>
 
   <div class="treatment-procedure">
-    <div class="container">
+    <div class="container w-75">
       <div class="row">
         <h1 class="color-turquoise">
           Recommended <tspan class="color-dark-blue">treatment procedure</tspan>
@@ -1214,7 +1240,7 @@
   </div>
 
   <div class="quote" id="quote">
-    <div class="container">
+    <div class="container w-75">
       <div class="row">
         <div class="col-sm-12">
           <div class="row">
@@ -1389,7 +1415,7 @@
   </div>
 
   <div class="quote-tagline">
-    <div class="container">
+    <div class="container w-75">
       <div class="row">
         <div class="col-sm-10">
           <h1 class="custom-bold color-dark-blue">
@@ -1401,11 +1427,12 @@
   </div>
 
   <div class="customers">
-    <div class="container">
+    <div class="container w-75">
       <div class="row">
         <h1 class="text-center">What our customers think</h1>
       </div>
       <div class="row customer">
+        <div class="col-sm-2"></div>
         <div class="col-sm-2">
           <img
             class="customer-logo customer-logo-0"
@@ -1423,6 +1450,7 @@
         <div class="col-sm-2"></div>
       </div>
       <div class="row customer">
+        <div class="col-sm-2"></div>
         <div class="col-sm-2">
           <img
             class="customer-logo customer-logo-1"
@@ -1443,7 +1471,7 @@
   </div>
 
   <div class="partners">
-    <div class="container">
+    <div class="container w-75">
       <div class="row">
         <h4 class="text-center">PARTNERS</h4>
       </div>
@@ -1489,7 +1517,7 @@
   </div>
 
   <footer class="footer" id="contact">
-    <div class="container">
+    <div class="container w-75">
       <div class="row">
         <div class="col-sm-6">
           <div class="footer-tagline">
@@ -1508,10 +1536,6 @@
                 <a href="mailto:info@sanarc.co.za" class="contact-link"
                   >info@sanarc.co.za</a
                 >
-              </div>
-              <div>
-                Tel:
-                <a href="tel:0642687761" class="contact-link">064 268 7761</a>
               </div>
               <div class="footer-social">
                 <ul>
@@ -1560,6 +1584,11 @@
     /*
     Username: julianlancaster100@gmail.com
      Password: Lola@5656
+
+    To do:
+     make image center as responsive
+
+     descriptions: letter-spacing: 0.03em; col-10
     */
     $('[href="#disinfection"]').click(function (e) {
       e.preventDefault();
@@ -1596,6 +1625,14 @@
 
     function covid_img_unhover(element) {
       element.setAttribute("src", "ASSETS/covid-19/orange.svg");
+    }
+
+    function catalogue_img_hover(element) {
+      element.setAttribute("src", "ASSETS/catalogue/white.svg");
+    }
+
+    function catalogue_img_unhover(element) {
+      element.setAttribute("src", "ASSETS/catalogue/blue.svg");
     }
 
     function custom_expand_click(element) {
