@@ -6,20 +6,22 @@
 />
 <head>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-  <link
-    rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-  />
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="icon" href="favicon.ico" />
   <script
     src="https://code.jquery.com/jquery-3.5.1.js"
     integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"
   ></script>
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  />
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="icon" href="favicon.ico" />
+
   <script>
     $(function () {
       $(document).scroll(function () {
@@ -57,6 +59,10 @@
   body {
     font-family: "Circular Std Book";
   }
+
+  /*
+  burger -> fix
+  */
   /*
   Header CSS Rules
   */
@@ -206,8 +212,8 @@
   }
 
   .col-read-more {
-    width: 200px;
-    margin-left: 30px;
+    width: 220px;
+    margin-left: 0px;
   }
 
   .read-more-btn img {
@@ -290,9 +296,8 @@
   }
 
   .products-and-services .catalogue img {
-    width: 200px;
+    width: 220px;
     cursor: pointer;
-    border: 1px solid #0a1f8c;
   }
 
   @media (max-width: 500px) {
@@ -415,6 +420,7 @@
   .disinfection-text {
     padding-bottom: 45px;
     padding-left: 0px !important;
+    font-family: "Circular Std Book" !important;
   }
 
   .disinfection h3 {
@@ -426,6 +432,8 @@
   .disinfection .list-group-item {
     color: #0a1f8c;
     border: none;
+    text-indent: -24px;
+    margin-left: 10px;
   }
 
   @media (max-width: 500px) {
@@ -479,9 +487,8 @@
   }
 
   .add-products .catalogue img {
-    width: 200px;
+    width: 220px;
     cursor: pointer;
-    border: 1px solid #0a1f8c;
   }
 
   @media (max-width: 500px) {
@@ -753,6 +760,7 @@
     float: right;
     width: 100px;
     cursor: pointer;
+    border-radius: 5px;
   }
 
   .quote-submit img {
@@ -934,7 +942,8 @@
 
   footer {
     background-color: #00edba !important;
-    padding: 80px 0;
+    padding: 10px 0;
+    padding-top: 80px;
   }
   footer .footer-widget h4 {
     margin-bottom: 30px;
@@ -995,7 +1004,7 @@
   }
 
   .footer-tagline {
-    margin-top: 80px;
+    margin-top: 160px;
   }
 
   @media (max-width: 500px) {
@@ -1047,7 +1056,7 @@ mail($to,$subject,$txt,$headers);
       id="mainNav"
     >
       <div class="container w-75">
-        <a class="navbar-brand js-scroll-trigger" href="index.html">
+        <a class="navbar-brand js-scroll-trigger" href="#covid-banner">
           <h2></h2>
           <img class="header-img" src="ASSETS/SANARC_for-Web_BLUE.png" />
         </a>
@@ -1056,7 +1065,7 @@ mail($to,$subject,$txt,$headers);
           type="button"
           data-toggle="collapse"
           data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
+          aria-controls="#navbarResponsive"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
@@ -1093,7 +1102,7 @@ mail($to,$subject,$txt,$headers);
           class="covid-link"
           href="https://sacoronavirus.co.za/"
           target="_blank"
-          >More information</a
+          >more information</a
         >
       </div>
     </div>
@@ -1205,15 +1214,13 @@ mail($to,$subject,$txt,$headers);
     <div class="container w-75">
       <div class="row">
         <h1 class="color-turquoise custom-bold">
-          Our <tspan class="color-dark-blue">Vision</tspan>
+          Our <tspan class="color-dark-blue">vision</tspan>
         </h1>
       </div>
       <div class="row">
         <div class="col-sm-10">
           <h3 class="color-dark-blue vision-text">
-            To be the industry standard for Covid-19 related preventative
-            solutions specifically tailored to the education, residential,
-            recreational, hospitality and corporate sectors.
+            To augment the global calibration for Covid-19 related preventative solutions; specifically tailored to education, residential, recreational, hospitality and corporate sectors.
           </h3>
         </div>
       </div>
@@ -1237,9 +1244,7 @@ mail($to,$subject,$txt,$headers);
       <div class="row">
         <div class="col-sm-10">
           <h3 class="color-dark-blue how-works-text">
-            Our Electrostatic Sprayers produce electrically charged spray
-            droplets which are carried to the targets in a high-speed air
-            stream.
+            Our Electrostatic Spray Systems produce electrically charged spray droplets which are carried to the targets in a high-speed air stream.
           </h3>
         </div>
       </div>
@@ -1249,14 +1254,7 @@ mail($to,$subject,$txt,$headers);
     <div class="container-fluid">
       <div class="row">
         <div class="embed-responsive embed-responsive-16by9">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/Cp8i40AuXSw"
-            frameborder="0"
-            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/B2IBsDQm32U" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -1272,9 +1270,7 @@ mail($to,$subject,$txt,$headers);
       <div class="row">
         <div class="col-sm-10">
           <h3 class="color-dark-blue disinfection-text">
-            Our Electrostatic Sprayers produce electrically charged spray
-            droplets which are carried to the targets in a high-speed air
-            stream.
+            We combine our electrostatic sprayers with a highly effective sanitiser agent in order to combat Covid-19. 
           </h3>
         </div>
       </div>
@@ -1814,7 +1810,25 @@ mail($to,$subject,$txt,$headers);
       </div>
       <div class="row customer">
         <div class="col-sm-2"></div>
-        <div class="col-sm-2">
+        <div class="col-sm-3">
+          <img
+            class="customer-logo customer-logo-0"
+            src="ASSETS/customers/Appleton.png"
+          />
+        </div>
+        <div class="col-sm-6">
+          <div class="customer-quote">
+            <p>
+              “Sanarc offers a unique service utilizing special products that ensure that we are working in a healthy environment. The process itself does not disrupt the working day and we have found the staff to be friendly and very professional. I recommend them to you.”
+            </p>
+            <p class="custom-bold custom-italic">- Appleton</p>
+          </div>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+      <div class="row customer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-3">
           <img
             class="customer-logo customer-logo-0"
             src="ASSETS/customers/CDeCerff.png"
@@ -1832,7 +1846,24 @@ mail($to,$subject,$txt,$headers);
       </div>
       <div class="row customer">
         <div class="col-sm-2"></div>
-        <div class="col-sm-2">
+        <div class="col-sm-3">
+          <img
+            class="customer-logo customer-logo-1"
+            src="ASSETS/customers/Spirit.png"
+          />
+        </div>
+        <div class="col-sm-6">
+          <div class="customer-quote">
+            <p>
+              ““We chose Sanarc to sanitize all of our offices due to the professional reference they were able to give and the highly competitive rates they offered. Sanarc have shown a professional and respectful attitude and we would recommend them to any other business.”
+            </p>
+            <p class="custom-bold custom-italic">- Spirit Invest</p>
+          </div>
+        </div>
+      </div>
+      <div class="row customer">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-3">
           <img
             class="customer-logo customer-logo-1"
             src="ASSETS/customers/Warwick.png"
@@ -1841,8 +1872,7 @@ mail($to,$subject,$txt,$headers);
         <div class="col-sm-6">
           <div class="customer-quote">
             <p>
-              “The cost of the treatment was excellent value, and the process
-              itself is non-intrusive and extremely efficient.”
+              “As a client facing business the health of our clients is an absolute priority and therefore we take the sanitizing of all our offices very seriously. In Sanarc we have found a polite, professional and well run company who offered us good service and flexibility in terms of times. I would be happy to recommend them to any other organization." 
             </p>
             <p class="custom-bold custom-italic">- Warwick Wealth</p>
           </div>
