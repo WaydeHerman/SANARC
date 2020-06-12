@@ -165,6 +165,13 @@
     padding: 10px 20px;
   }
 
+  .navbar-light .navbar-toggler {
+    border-color: #0a1f8c;
+  }
+
+  .navbar-light .navbar-toggler-icon {
+    background-image: url("ASSETS/navbar/burger.svg");
+  }
   /*
   Covid Banner
   */
@@ -224,6 +231,31 @@
     width: 100%;
   }
 
+  @media (max-width: 500px) {
+    .home-banner {
+      margin-bottom: 50px;
+    }
+
+    .col-read-more {
+      margin: auto;
+    text-align: center;
+    text-anchor: middle;
+    }
+
+    .read-more-btn img {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .home h1 {
+      font-size: 2em;
+    }
+
+    .home h4 {
+      font-size: 1.2em;
+    }
+  }
+
   /*
   Products and Services
   */
@@ -262,6 +294,29 @@
     cursor: pointer;
     border: 1px solid #0a1f8c;
   }
+
+  @media (max-width: 500px) {
+    .products-and-services {
+      margin-top: 30px;
+    }
+
+    .home h2 {
+      font-size: 2em;
+    }
+
+    .products-and-services .col-sm-3 {
+    }
+    .products-and-services .catalogue {
+      left: auto;
+      bottom: auto;
+      position: inherit;
+    }
+
+    .products-and-services .catalogue img {
+      margin-top: 20px;
+    }
+
+  }
   /*
   vision
   */
@@ -287,6 +342,23 @@
 
   .vision-img {
     height: 520px;
+  }
+
+  @media (max-width: 500px) {
+    .vision h1 {
+      padding: 15px;
+      font-size: 2em;
+    }
+
+    .vision h3 {
+      font-size: 1.2em;
+      margin-bottom: 80px;
+    }
+
+    .vision-img-container {
+      display: none;
+    }
+
   }
   /*
   How works
@@ -317,6 +389,16 @@
     height: 300px;
   }
 
+  @media (max-width: 500px) {
+    .how-works h1 {
+      font-size: 2em;
+    }
+
+    .how-works h3 {
+      font-size: 1.2em;
+    }
+
+  }
   /*
   Disinfection
   */
@@ -346,6 +428,25 @@
     border: none;
   }
 
+  @media (max-width: 500px) {
+    .disinfection {
+      margin-bottom: 20px;
+    }
+    .disinfection h1 {
+      font-size: 2em;
+      padding: 10px;
+    }
+
+    .disinfection h3 {
+      font-size: 1.2em;
+      padding: 10px;
+    }
+
+    .disinfection .list-group-item {
+      padding-left: 0px;
+    }
+
+  }
   /*
   Additional Products
   */
@@ -382,6 +483,21 @@
     cursor: pointer;
     border: 1px solid #0a1f8c;
   }
+
+  @media (max-width: 500px) {
+    .add-products h1 {
+      font-size: 2em;
+    }
+
+    .add-products h3 {
+      font-size: 1.2em;
+    }
+
+    .add-products .list-group-item {
+      font-size: 1.2em;
+    }
+
+  }
   /*
   How differ
   */
@@ -398,6 +514,18 @@
 
   .how-differ-text {
     padding-left: 10px;
+  }
+
+  @media (max-width: 500px) {
+    .how-differ h1 {
+      font-size: 2em;
+      margin-top: 20px;
+    }
+
+    .how-differ h3 {
+      font-size: 1.2em;
+    }
+
   }
 
   /*
@@ -463,6 +591,48 @@
 
   .treatment-procedure .row {
     padding: 10px;
+  }
+
+  .treatment-procedure .mobile-version {
+    display: none
+  }
+
+  @media (max-width: 500px) {
+
+    .treatment-procedure {
+      margin-bottom: 30px;
+    }
+    .treatment-procedure h1 {
+      font-size: 2em;
+      margin-top: 0px;
+      padding: 10px;
+    }
+
+    .treatment-procedure h3 {
+      font-size: 1.2em;
+    }
+
+    .right-treatment,
+    .left-treatment {
+      height: 120px;
+    }
+
+    .treatment-step h2{
+      font-size: 1.4em;
+    }
+
+    .treatment-text-container {
+      position: relative;
+    }
+
+    .treatment-procedure .mobile-version {
+      display: block;
+    }
+
+    .treatment-procedure .desktop-version {
+      display: none;
+    }
+
   }
 
   /*
@@ -618,6 +788,33 @@
     padding-right: 0px !important;
     background-color: #c6f3eb;
   }
+
+  @media (max-width: 500px) {
+
+    .quote {
+      padding-top: 50px;
+      background-image:none;
+      height: auto;
+    }
+    .quote h1 {
+      font-size: 2em;
+      margin-top: 0px;
+      padding: 10px;
+    }
+
+    .quote h3 {
+      font-size: 1.2em;
+    }
+
+    .custom-expand-col {
+      display: none;
+    }
+
+    .quote-tagline {
+      display: none;
+    }
+
+  }
   /*
   Customers
   */
@@ -647,6 +844,30 @@
   .customer-logo-1 {
     top: -10px;
     position: relative;
+  }
+
+  @media (max-width: 500px) {
+
+    .customers {
+
+    }
+    .customers h1 {
+      font-size: 2em;
+    }
+
+    .customers h3 {
+      font-size: 1.2em;
+    }
+
+    .customer-logo-0 {
+      top: auto;
+      margin-bottom: 20px;
+    }
+
+    .customer {
+      padding: 10px;
+    }
+
   }
   /*
   Partners
@@ -690,6 +911,18 @@
   }
   .partner-item-5 {
     margin-top: 60px;
+  }
+
+  @media (max-width: 500px) {
+
+    .partners h4 {
+      margin-bottom: 0px;
+    }
+    .partners .column {
+      width: 50%;
+    }
+
+
   }
 
   /*
@@ -763,6 +996,14 @@
 
   .footer-tagline {
     margin-top: 80px;
+  }
+
+  @media (max-width: 500px) {
+
+    .footer-tagline {
+      display: none;
+    }
+
   }
 
   /*
@@ -1165,7 +1406,7 @@ mail($to,$subject,$txt,$headers);
   </div>
 
   <div class="treatment-procedure">
-    <div class="container w-75">
+    <div class="container w-75 desktop-version">
       <div class="row">
         <h1 class="color-turquoise">
           Recommended <tspan class="color-dark-blue">treatment procedure</tspan>
@@ -1270,6 +1511,113 @@ mail($to,$subject,$txt,$headers);
         </div>
       </div>
     </div>
+    <div class="container w-75 mobile-version">
+      <div class="row">
+        <h1 class="color-turquoise">
+          Recommended <tspan class="color-dark-blue">treatment procedure</tspan>
+        </h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="left-treatment">
+            <div class="treatment-step">
+              <h2>
+                Step 1: <tspan class="color-turquoise">ESS spraying</tspan>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="treatment-text-container">
+            <p class="treatment-text">
+              Sanarc will do a full preventative treatment which encompasses a
+              full coverage sanitation of the premises by means of ESS
+              technology.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="right-treatment">
+            <div class="treatment-step">
+              <h2>Step 2: <tspan class="color-turquoise">Signage</tspan></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="treatment-text-container">
+            <p class="treatment-text">
+              After completing the sanitation treatment, we provide a variety of
+              safety and educational signs.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="left-treatment">
+            <div class="treatment-step">
+              <h2>
+                Step 3: <tspan class="color-turquoise">Sanitation stands</tspan>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="treatment-text-container">
+            <p class="treatment-text">
+              Hands-Free Sanitizing stands will be placed in areas which contain
+              high human congregation, to ensure that hand sanitizer is readily
+              available.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="right-treatment">
+            <div class="treatment-step">
+              <h2>Step 4: <tspan class="color-turquoise">Ozone</tspan></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+
+          <div class="treatment-text-container">
+            <p class="treatment-text">
+              As a further means of precaution, ‘Ozone Technology’ can be placed
+              in high- traffic areas, in order to decontaminate the surrounding
+              air.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="left-treatment">
+            <div class="treatment-step">
+              <h2>
+                Step 5:
+                <tspan class="color-turquoise"
+                  >External environmental swab</tspan
+                >
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="treatment-text-container">
+            <p class="treatment-text">
+              As a final measure to provide credible evidence that your
+              environment is Covid- 19 free, one can opt for a swabbing test
+              which we will complete, and send off to a laboratory for testing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <div class="quote" id="quote">
