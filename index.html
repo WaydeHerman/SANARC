@@ -657,6 +657,7 @@
     padding-bottom: 45px;
     background-color: #c6f3eb;
     padding-top: 102px;
+    
   }
   .form-item {
     margin-top: 10px;
@@ -696,7 +697,7 @@
   }
 
   .quote .list-group {
-    margin-bottom: 25px;
+    
   }
 
   .quote-expand {
@@ -795,6 +796,10 @@
     padding-left: 0px !important;
     padding-right: 0px !important;
     background-color: #c6f3eb;
+  }
+
+  .quote .info {
+    margin-bottom: 45px;
   }
 
   @media (max-width: 500px) {
@@ -1011,6 +1016,24 @@
 
     .footer-tagline {
       display: none;
+    }
+    
+    .footer {
+      padding-bottom: 30px;
+    }
+
+    .footer .footer-widget {
+      margin-left: 0px;
+      text-align: center;
+    }
+
+    footer .footer-social ul li {
+      display: inline-block;
+      float: none;
+    }
+
+    footer .footer-social ul {
+      margin-top: 10px;
     }
 
   }
@@ -1620,7 +1643,7 @@ mail($to,$subject,$txt,$headers);
     <div class="container w-75">
       <form action="index.php" method="POST"></form>
       <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-12 info">
           <div class="row">
             <div class="col-sm-5">
               <h5>What do you need?</h5>
@@ -1702,7 +1725,7 @@ mail($to,$subject,$txt,$headers);
             </div>
           </div>
         </div>
-        <div class="col-sm-10"></div>
+
       </div>
       <div class="row">
         <div class="col-sm-8">
