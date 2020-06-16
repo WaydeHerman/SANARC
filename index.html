@@ -4,6 +4,10 @@
   name="viewport"
   content="width=device-width, initial-scale=1, maximum-scale=1"
 />
+<meta charset="UTF-8">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<title>Sanarc Solutions</title>
 <head>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <script
@@ -211,6 +215,10 @@
     margin-bottom: 270px;
   }
 
+  .home h4 {
+    letter-spacing: 0.03em;
+  }
+
   .col-read-more {
     width: 220px;
     margin-left: 0px;
@@ -335,6 +343,7 @@
 
   .vision-text {
     padding-left: 10px;
+    letter-spacing: 0.03em;
   }
 
   .vision-img-container {
@@ -381,6 +390,7 @@
 
   .how-works-text {
     padding-left: 10px;
+    letter-spacing: 0.03em;
   }
 
   .how-works-img-container {
@@ -415,6 +425,7 @@
   .disinfection h1 {
     padding: 20px;
     font-family: "Circular Std Bold";
+    letter-spacing: 0.03em;
   }
 
   .disinfection-text {
@@ -468,6 +479,7 @@
 
   .add-products-text {
     margin-bottom: 30px;
+    letter-spacing: 0.03em;
   }
 
   .add-products .list-group-item {
@@ -521,6 +533,7 @@
 
   .how-differ-text {
     padding-left: 10px;
+    letter-spacing: 0.03em;
   }
 
   @media (max-width: 500px) {
@@ -648,7 +661,7 @@
   .quote {
     background-image: url("ASSETS/quote/shape.svg");
     width: 100%;
-    height: 760px;
+    height: 860px;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -800,6 +813,15 @@
 
   .quote .info {
     margin-bottom: 45px;
+  }
+  @media (max-width: 1250px) {
+    .custom-expand-col {
+      display: none;
+    }
+
+    .quote-tagline {
+      display: none;
+    }
   }
 
   @media (max-width: 500px) {
@@ -1012,6 +1034,22 @@
     margin-top: 160px;
   }
 
+  @media (max-width: 1100px) {
+    .footer .footer-widget {
+      margin-left: 0px;
+    }
+
+    footer .footer-social ul li {
+      display: inline-block;
+      float: none;
+      margin: 0px;
+    }
+
+    footer .footer-social ul {
+      margin-top: 10px;
+    }
+  }
+
   @media (max-width: 500px) {
 
     .footer-tagline {
@@ -1072,7 +1110,7 @@ $headers = "From: webmaster@host4future.in" ;
 echo "My first PHP script!";
 mail($to,$subject,$txt,$headers);
 ?>
-<body>
+<body onresize="custom_close()">
   <header>
     <nav
       class="navbar navbar-expand-lg navbar-light bg-light fixed-top navbar-fixed-top"
@@ -1649,18 +1687,19 @@ mail($to,$subject,$txt,$headers);
               <h5>What do you need?</h5>
               <h5>We can give you a quote:</h5>
               <p>choose the size of your premise:</p>
+              <p><img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />Rates: R750 call out fee +R7.50 per m<sup>2</sup> inclusive of call out fee +R7.50 per m<sup>2</sup>. A tailored quote will be provided upon request.</p>
               <ul class="list-group">
                 <li class="list-group-item">
                   <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
-                  0-500 m<sup>2</sup>
+                  0-300m<sup>2</sup>
                 </li>
                 <li class="list-group-item">
                   <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
-                  500-1000 m<sup>2</sup>
+                  300-1000m<sup>2</sup>
                 </li>
                 <li class="list-group-item">
                   <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
-                  1000 m<sup>2</sup> -over
+                  Over a 1000m<sup>2</sup>
                 </li>
               </ul>
             </div>
@@ -1971,6 +2010,12 @@ mail($to,$subject,$txt,$headers);
                   >info@sanarc.co.za</a
                 >
               </div>
+              <div>
+                Telephone:
+                <a href="tel:0793139156" class="contact-link"
+                  >079 313 9156</a
+                >
+              </div>
               <div class="footer-social">
                 <ul>
                   <li>
@@ -2016,12 +2061,6 @@ mail($to,$subject,$txt,$headers);
   </footer>
   <script>
     /*
-    Username: julianlancaster100@gmail.com
-     Password: Lola@5656
-
-    To do:
-     make image center as responsive
-
      descriptions: letter-spacing: 0.03em; col-10
     */
     $('[href="#disinfection"]').click(function (e) {
@@ -2077,15 +2116,24 @@ mail($to,$subject,$txt,$headers);
       element.setAttribute("src", "ASSETS/quote/green.svg");
     }
 
+    function custom_close() {
+      console.log('custom_close() USED')
+      var element = document.querySelector(".custom-expand-col")
+      if (element.classList.contains("custom-expanded")) {
+        element.classList.toggle("custom-expanded");
+        document.querySelector(".plus-icon-quote").style.display = "block";
+        element.style.width = state.width + "px";
+        document.querySelector(".quote-info").style.display = "none";
+      }
+    }
+
     function custom_expand_click(element) {
       if (element.classList.contains("custom-expanded")) {
         element.classList.toggle("custom-expanded");
         document.querySelector(".plus-icon-quote").style.display = "block";
         element.style.width = state.width + "px";
         document.querySelector(".quote-info").style.display = "none";
-        console.log("WAS expanded");
       } else {
-        console.log("NOW expanding");
         element.classList.toggle("custom-expanded");
         state.width = element.offsetWidth;
         state.height = element.offsetHeight;
