@@ -52,14 +52,6 @@
       url("ASSETS/fonts/CircularStdBook.otf") format("opentype");
   }
 
-  @font-face {
-    font-family: "Minion Pro";
-    font-style: normal;
-    font-weight: normal;
-    src: local("Minion Pro"),
-      url("ASSETS/fonts/MinionPro-Regular.otf") format("opentype");
-  }
-
   body {
     font-family: "Circular Std Book";
   }
@@ -208,6 +200,9 @@
     width: 100%;
     height: auto;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
   }
 
   .home-banner {
@@ -244,16 +239,40 @@
   .full-width-image img {
     width: 100%;
   }
+  @media (max-width: 1200px) {
+
+    .home {
+      background-image: url("ASSETS/images/home_banner_small.jpeg");
+    }
+
+    .home-banner {
+      margin-bottom: 20px;
+    }
+
+    .read-more-btn img {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .home {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+  }//
 
   @media (max-width: 500px) {
+
+    
     .home-banner {
       margin-bottom: 50px;
     }
 
     .col-read-more {
       margin: auto;
-    text-align: center;
-    text-anchor: middle;
+      text-align: center;
+      text-anchor: middle;
     }
 
     .read-more-btn img {
@@ -342,7 +361,6 @@
   }
 
   .vision-text {
-    padding-left: 10px;
     letter-spacing: 0.03em;
   }
 
@@ -389,7 +407,6 @@
   }
 
   .how-works-text {
-    padding-left: 10px;
     letter-spacing: 0.03em;
   }
 
@@ -532,7 +549,6 @@
   }
 
   .how-differ-text {
-    padding-left: 10px;
     letter-spacing: 0.03em;
   }
 
@@ -1099,17 +1115,7 @@
     color: #ffffff;
   }
 </style>
-<?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-$to = "wayde.h@gmail.com";
-$subject = "My subject"; 
-$txt = "Hello world!";
-$headers = "From: webmaster@host4future.in" ;
-echo "My first PHP script!";
-mail($to,$subject,$txt,$headers);
-?>
+
 <body onresize="custom_close()">
   <header>
     <nav
@@ -1141,9 +1147,6 @@ mail($to,$subject,$txt,$headers);
               <a class="nav-link" href="#disinfection">About Sanarc</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#add-products">Products</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="#quote">Get a Quote</a>
             </li>
             <li class="nav-item">
@@ -1172,18 +1175,18 @@ mail($to,$subject,$txt,$headers);
   <div class="home" id="home">
     <div class="container w-75">
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-12 col-md-6">
           <div class="home-banner custom-bold">
             <h1 class="color-turquoise">
               For your peace of <tspan class="color-white">mind</tspan>
             </h1>
             <h4 class="color-white">
-              utilizing industry leading expertise and technology, to prevent
-              the spread of viruses
+              Utilizing industry leading expertise and technology to prevent
+              the spread of viruses.
             </h4>
           </div>
         </div>
-        <div class="col-sm-3"></div>
+        <div class="col-sm-0 col-md-3"></div>
         <div class="col-read-more">
           <a
             class="read-more-btn"
@@ -1215,10 +1218,6 @@ mail($to,$subject,$txt,$headers);
               <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
               <tspan class="custom-bold">Service : </tspan>Electrostatic
               spraying
-            </li>
-            <li class="list-group-item">
-              <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
-              Additional products
             </li>
             <li class="list-group-item">
               <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
@@ -1357,7 +1356,7 @@ mail($to,$subject,$txt,$headers);
             </li>
             <li class="list-group-item">
               <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
-              Reach complex areas with 360 degree wrap arounddisinfection layer
+              Reach complex areas with 360 degree wrap around disinfection layer
               Can be safely used on all surfaces including kitchenware, files,
               technology, etc.
             </li>
@@ -1375,66 +1374,6 @@ mail($to,$subject,$txt,$headers);
               Environment safe for occupation minutes after application
             </li>
           </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="add-products" id="add-products">
-    <div class="container w-75">
-      <div class="row">
-        <h1 class="color-turquoise">
-          Additional <tspan class="color-dark-blue">Products</tspan>
-        </h1>
-      </div>
-      <div class="row">
-        <div class="col-sm-10">
-          <h3 class="color-dark-blue add-products-text">
-            In addition to providing a disinfection service, we offer a
-            comprehensive range of related products, including:
-          </h3>
-        </div>
-      </div>
-      <div class="row">
-        <ul class="list-group">
-          <li class="list-group-item">
-            <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
-            Environmental swabs
-          </li>
-          <li class="list-group-item">
-            <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
-            Covid-19 safety signage
-          </li>
-          <li class="list-group-item">
-            <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
-            Ozone Purifiers
-          </li>
-          <li class="list-group-item">
-            <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
-            Sanitation Stands
-          </li>
-          <li class="list-group-item">
-            <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
-            Misting Tunnels
-          </li>
-        </ul>
-      </div>
-      <div class="row">
-        <div class="col-sm-8">
-          <p class="add-products-catalogue-text">
-            For more information, please see our product catalogue
-          </p>
-          <a
-            class="catalogue"
-            href="ASSETS/files/SANARC_Product_Catalogue.pdf"
-            download
-          >
-            <img
-              src="ASSETS/catalogue/blue.svg"
-              onmouseover="catalogue_img_hover(this)"
-              onmouseout="catalogue_img_unhover(this)"
-            />
-          </a>
         </div>
       </div>
     </div>
@@ -1679,7 +1618,7 @@ mail($to,$subject,$txt,$headers);
 
   <div class="quote" id="quote">
     <div class="container w-75">
-      <form action="index.php" method="POST"></form>
+      <form action="/test.php" method="POST"></form>
       <div class="row">
         <div class="col-sm-12 info">
           <div class="row">
@@ -1857,7 +1796,7 @@ mail($to,$subject,$txt,$headers);
       <div class="row quote-tagline">
         <div class="col-sm-10">
           <h1 class="custom-bold color-dark-blue">
-            for your peace of <tspan class="color-white">mind</tspan>
+            For your peace of <tspan class="color-white">mind</tspan>
           </h1>
         </div>
       </div>
@@ -1917,7 +1856,7 @@ mail($to,$subject,$txt,$headers);
         <div class="col-sm-6">
           <div class="customer-quote">
             <p>
-              ““We chose Sanarc to sanitize all of our offices due to the professional reference they were able to give and the highly competitive rates they offered. Sanarc have shown a professional and respectful attitude and we would recommend them to any other business.”
+              “We chose Sanarc to sanitize all of our offices due to the professional reference they were able to give and the highly competitive rates they offered. Sanarc have shown a professional and respectful attitude and we would recommend them to any other business.”
             </p>
             <p class="custom-bold custom-italic">- Spirit Invest</p>
           </div>
