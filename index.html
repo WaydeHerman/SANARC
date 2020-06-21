@@ -20,10 +20,7 @@
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
   />
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-    rel="stylesheet"
-  />
+
   <link rel="icon" href="favicon.ico" />
 
   <script>
@@ -56,9 +53,6 @@
     font-family: "Circular Std Book";
   }
 
-  /*
-  burger -> fix
-  */
   /*
   Header CSS Rules
   */
@@ -189,6 +183,14 @@
     color: #0a1f8c !important;
     font-family: "Circular Std Bold";
     text-decoration: underline !important;
+  }
+
+  .construction-banner-container {
+    padding-top: 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #000000;
+    padding-bottom: 16px;
   }
 
   /*
@@ -677,7 +679,7 @@
   .quote {
     background-image: url("ASSETS/quote/shape.svg");
     width: 100%;
-    height: 860px;
+    height: 1020px;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -689,7 +691,12 @@
     
   }
   .form-item {
-    margin-top: 10px;
+    margin-top: 20px;
+  }
+
+  .form-item-2 {
+    line-height: 1em;
+    margin-top: 20px;
   }
 
   .quote input[type="text"],
@@ -782,7 +789,36 @@
 
   .quote-tagline {
     position: relative;
-    top: 100px;
+    top: 210px;
+  }
+
+  .quote-2-yes {
+    width: 60px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+    bottom: -18px;
+  }
+
+
+  .quote-2-no {
+    width: 60px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+    bottom: -18px;
+  }
+
+
+  .quote-2-unsure {
+    width: 76px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+    bottom: -18px;
   }
 
   .quote-submit {
@@ -829,6 +865,28 @@
 
   .quote .info {
     margin-bottom: 45px;
+  }
+
+  .form-add {
+    background-color: #00edba;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .form-add-text {
+    color: #0a1f8c;
+    margin-top: 10px;
+  }
+
+  .form-body {
+    position: relative;
+    margin-top: -260px;
+  }
+
+  .form-add p {
+    font-size: 0.9em;
+    margin-left: 20px;
+    margin-top: 5px;
   }
   @media (max-width: 1250px) {
     .custom-expand-col {
@@ -1114,6 +1172,7 @@
   .color-white {
     color: #ffffff;
   }
+
 </style>
 
 <body onresize="custom_close()">
@@ -1616,6 +1675,14 @@
 
   </div>
 
+  <div class="construction-banner-container" id="construction-banner">
+    <div class="container w-75">
+      <div class="construction-banner text-center">
+        Website is currently under construction.
+      </div>
+    </div>
+  </div>
+
   <div class="quote" id="quote">
     <div class="container w-75">
       <form action="/test.php" method="POST"></form>
@@ -1624,101 +1691,63 @@
           <div class="row">
             <div class="col-sm-5">
               <h5>What do you need?</h5>
-              <h5>We can give you a quote:</h5>
-              <p>choose the size of your premise:</p>
-              <p><img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />Rates: R750 call out fee +R7.50 per m<sup>2</sup> inclusive of call out fee +R7.50 per m<sup>2</sup>. A tailored quote will be provided upon request.</p>
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
-                  0-300m<sup>2</sup>
-                </li>
-                <li class="list-group-item">
-                  <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
-                  300-1000m<sup>2</sup>
-                </li>
-                <li class="list-group-item">
-                  <img class="plus-icon" src="ASSETS/icons/plus-solid.svg" />
-                  Over a 1000m<sup>2</sup>
-                </li>
-              </ul>
-            </div>
-            <div class="custom-expand-col" onclick="custom_expand_click(this)">
-              <div class="quote-expand">
-                <img
-                  class="plus-icon-quote"
-                  src="ASSETS/icons/plus-solid.svg"
-                />
-                <div class="quote-info">
-                  <div class="quote-row">
-                    <div class="quote-col">
-                      <div class="quote-col-headers">
-                        Description
-                      </div>
-                    </div>
-                    <div class="quote-col">
-                      <div class="quote-col-headers">
-                        Rates
-                      </div>
-                    </div>
-                    <div class="quote-col">
-                      <div class="quote-col-headers">
-                        Total (Rand)
-                      </div>
-                    </div>
-                  </div>
-                  <div class="quote-row">
-                    <div class="quote-col">
-                      <div class="quote-col-item">
-                        minimum charge
-                      </div>
-                    </div>
-                    <div class="quote-col">
-                      <div class="quote-col-item">
-                        inclusive of call out fee
-                      </div>
-                    </div>
-                    <div class="quote-col">
-                      <div class="quote-col-item">
-                        R3000
-                      </div>
-                    </div>
-                  </div>
-                  <div class="quote-row">
-                    <div class="quote-col">
-                      <div class="quote-col-item">
-                        pricing structure
-                      </div>
-                    </div>
-                    <div class="quote-col">
-                      <div class="quote-col-item">R7.50 per m<sup>2</sup></div>
-                    </div>
-                    <div class="quote-col">
-                      <div class="quote-col-item">
-                        = (m<sup>2</sup>) x R7,50
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <h5>We can give you a tailored quote:</h5>
             </div>
           </div>
         </div>
 
       </div>
       <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-6"></div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-4 form-add">
+          <h4 class="color-dark-blue custom-bold">Size of premises</h4>
           <div class="row">
-            <div class="col-sm-2 form-item">
-              <input
-                type="text"
+            <div class="col-sm-6 form-add-text"> <img class="plus-icon" src="ASSETS/icons/plus-solid.svg"> 0-1500m²</div>
+            <div class="col-sm-3">
+                <input
+                type="number"
                 class="form-control"
-                id="initials"
-                placeholder="Initials*"
-                name="initials"
-                
+                id="size-under"
+                placeholder="m²*"
+                name="size-under"
               />
             </div>
-            <div class="col-sm-4 form-item">
+            
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <p>General rates guidelines and policies</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 form-add-text"> <img class="plus-icon" src="ASSETS/icons/plus-solid.svg"> Over 1500m²</div>
+            <div class="col-sm-3">
+                <input
+                type="number"
+                class="form-control"
+                id="size-over"
+                placeholder="m²*"
+                name="size-over"
+              />
+             
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <p>We contact you and offer a reduced rate</p>
+            </div>
+            
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 form-body">
+          <div class="row">
+
+            <div class="col-sm-3 form-item">
               <input
                 type="text"
                 class="form-control"
@@ -1728,7 +1757,7 @@
                 
               />
             </div>
-            <div class="col-sm-4 form-item">
+            <div class="col-sm-3 form-item">
               <input
                 type="text"
                 class="form-control"
@@ -1740,7 +1769,18 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-10 form-item">
+            <div class="col-sm-6 form-item">
+              <input
+                type="text"
+                class="form-control"
+                id="address"
+                placeholder="Full address or suburb*"
+                name="address"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 form-item">
               <input
                 type="text"
                 class="form-control"
@@ -1751,7 +1791,18 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-10 form-item">
+            <div class="col-sm-6 form-item">
+              <input
+                type="text"
+                class="form-control"
+                id="date"
+                placeholder="Date and time required for our service*"
+                name="date"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 form-item">
               <input
                 type="tel"
                 class="form-control"
@@ -1763,7 +1814,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-10 form-item">
+            <div class="col-sm-6 form-item">
               <input
                 type="text"
                 class="form-control"
@@ -1775,8 +1826,68 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-3 form-item"></div>
-            <div class="col-sm-3 form-item"></div>
+            <div class="col-sm-6 form-item-2">
+              <p>Have you had a positive case of COVID-19 on your premises within the past 72 hrs?*</p>
+            </div>
+            <div class="col-sm-6">
+              <input
+              type="image"
+              border="0"
+              class="quote-2-yes"
+              id="tested-positive-yes"
+              src="ASSETS/quote/Asset_Yes_green.svg"
+              onmouseover="yes_img_hover(this)"
+              onmouseout="yes_img_unhover(this)"
+            />
+            <input
+            type="image"
+            border="0"
+            class="quote-2-no"
+            id="tested-positive-no"
+            src="ASSETS/quote/Asset_no_green7.svg"
+            onmouseover="no_img_hover(this)"
+            onmouseout="no_img_unhover(this)"
+          />
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 form-item-2">
+              <p>Are you interested in arranging a scheduled (monthly) service agreement at a tailored rate?*</p>
+            </div>
+            <div class="col-sm-6">
+              <input
+              type="image"
+              border="0"
+              class="quote-2-yes"
+              id="interested-yes"
+              src="ASSETS/quote/Asset_Yes_green.svg"
+              onmouseover="yes_img_hover(this)"
+              onmouseout="yes_img_unhover(this)"
+            />
+            <input
+            type="image"
+            border="0"
+            class="quote-2-no"
+            id="interested-no"
+            src="ASSETS/quote/Asset_no_green7.svg"
+            onmouseover="no_img_hover(this)"
+            onmouseout="no_img_unhover(this)"
+          />
+              <input
+              type="image"
+              border="0"
+              class="quote-2-unsure"
+              id="interested-unsure"
+              src="ASSETS/quote/Asset_unsure_green.svg"
+              onmouseover="unsure_img_hover(this)"
+              onmouseout="unsure_img_unhover(this)"
+            />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-1 form-item"></div>
+            <div class="col-sm-1 form-item"></div>
             <div class="col-sm-4 form-item">
               <input name="_formsubmit_id" type="text" style="display: none;" />
               <input
@@ -1791,6 +1902,7 @@
             </div>
           </div>
         </div>
+        <div class="col-sm-4"></div>
       </div>
 
       <div class="row quote-tagline">
@@ -1807,9 +1919,9 @@
   <div class="customers">
     <div class="container w-75">
       <div class="row">
-        <h1 class="text-center">What our customers think</h1>
+<h1 class="text-center">What our customers think</h1>
       </div>
-      <div class="row customer">
+        <div class="row customer">
         <div class="col-sm-2"></div>
         <div class="col-sm-3">
           <img
@@ -2053,6 +2165,30 @@
 
     function send_img_unhover(element) {
       element.setAttribute("src", "ASSETS/quote/green.svg");
+    }
+
+    function yes_img_hover(element) {
+      element.setAttribute("src", "ASSETS/quote/Asset_Yes_White.svg");
+    }
+
+    function yes_img_unhover(element) {
+      element.setAttribute("src", "ASSETS/quote/Asset_Yes_green.svg");
+    }
+
+    function no_img_hover(element) {
+      element.setAttribute("src", "ASSETS/quote/Asset_no_white6.svg");
+    }
+
+    function no_img_unhover(element) {
+      element.setAttribute("src", "ASSETS/quote/Asset_no_green7.svg");
+    }
+
+    function unsure_img_hover(element) {
+      element.setAttribute("src", "ASSETS/quote/Asset_unsure_white.svg");
+    }
+
+    function unsure_img_unhover(element) {
+      element.setAttribute("src", "ASSETS/quote/Asset_unsure_green.svg");
     }
 
     function custom_close() {
