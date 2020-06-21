@@ -871,6 +871,7 @@
     background-color: #00edba;
     padding: 20px;
     border-radius: 10px;
+    min-width: 340px;
   }
 
   .form-add-text {
@@ -888,9 +889,15 @@
     margin-left: 20px;
     margin-top: 5px;
   }
-  @media (max-width: 1250px) {
-    .custom-expand-col {
-      display: none;
+  @media (max-width: 1360px) {
+    .form-body {
+      position: relative;
+      margin-top: 0px;
+      margin-bottom: 50px;
+    }
+
+    .quote {
+      height: 1250px;
     }
 
     .quote-tagline {
