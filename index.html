@@ -789,7 +789,7 @@
 
   .quote-tagline {
     position: relative;
-    top: 210px;
+    top: 190px;
   }
 
   .quote-2-yes {
@@ -872,7 +872,22 @@
     padding: 20px;
     border-radius: 10px;
     min-width: 340px;
+    max-height: 230px;
+    margin-left: 10px;
+    margin-top: 15px;
   }
+
+  /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
   .form-add-text {
     color: #0a1f8c;
@@ -880,8 +895,6 @@
   }
 
   .form-body {
-    position: relative;
-    margin-top: -260px;
   }
 
   .form-add p {
@@ -903,6 +916,13 @@
     .quote-tagline {
       display: none;
     }
+  }
+
+  @media (max-width: 500px) {
+    .form-add {
+        min-width: 0px;
+        max-height: 300px;
+      }
   }
 
   @media (max-width: 500px) {
@@ -1692,7 +1712,7 @@
 
   <div class="quote" id="quote">
     <div class="container w-75">
-      <form action="/test.php" method="POST"></form>
+      <form action="/test.php" method="POST">
       <div class="row">
         <div class="col-sm-12 info">
           <div class="row">
@@ -1702,12 +1722,91 @@
             </div>
           </div>
         </div>
-
       </div>
       <div class="row">
-        <div class="col-sm-6"></div>
-        <div class="col-sm-2"></div>
-        <div class="col-sm-4 form-add">
+        <div class="col-sm-6 form-body">
+          <div class="row">
+            <div class="col-sm-6 form-item">
+              <input
+                type="text"
+                class="form-control"
+                id="fname"
+                placeholder="First name*"
+                name="fname"
+                
+              />
+            </div>
+            <div class="col-sm-6 form-item">
+              <input
+                type="text"
+                class="form-control"
+                id="lname"
+                placeholder="Last name*"
+                name="lname"
+                
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 form-item">
+              <input
+                type="text"
+                class="form-control"
+                id="address"
+                placeholder="Full address or suburb*"
+                name="address"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 form-item">
+              <input
+                type="text"
+                class="form-control"
+                id="company"
+                placeholder="Company name*"
+                name="company"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 form-item">
+              <input
+                type="text"
+                class="form-control"
+                id="date"
+                placeholder="Date and time required for our service*"
+                name="date"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 form-item">
+              <input
+                type="tel"
+                class="form-control"
+                id="phone"
+                placeholder="Phone number*"
+                name="phone"
+                
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 form-item">
+              <input
+                type="text"
+                class="form-control"
+                id="email"
+                placeholder="Email*"
+                name="email"
+                
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-1"></div>
+            <div class="col-sm-4 form-add">
           <h4 class="color-dark-blue custom-bold">Size of premises</h4>
           <div class="row">
             <div class="col-sm-6 form-add-text"> <img class="plus-icon" src="ASSETS/icons/plus-solid.svg"> 0-1500m²</div>
@@ -1749,169 +1848,84 @@
           </div>
 
         </div>
+        <div class="row"></div>
       </div>
       <div class="row">
-        <div class="col-sm-12 form-body">
-          <div class="row">
-
-            <div class="col-sm-3 form-item">
-              <input
-                type="text"
-                class="form-control"
-                id="fname"
-                placeholder="First name*"
-                name="fname"
-                
-              />
-            </div>
-            <div class="col-sm-3 form-item">
-              <input
-                type="text"
-                class="form-control"
-                id="lname"
-                placeholder="Last name*"
-                name="lname"
-                
-              />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6 form-item">
-              <input
-                type="text"
-                class="form-control"
-                id="address"
-                placeholder="Full address or suburb*"
-                name="address"
-              />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6 form-item">
-              <input
-                type="text"
-                class="form-control"
-                id="company"
-                placeholder="Company name*"
-                name="company"
-              />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6 form-item">
-              <input
-                type="text"
-                class="form-control"
-                id="date"
-                placeholder="Date and time required for our service*"
-                name="date"
-              />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6 form-item">
-              <input
-                type="tel"
-                class="form-control"
-                id="phone"
-                placeholder="Phone number*"
-                name="phone"
-                
-              />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6 form-item">
-              <input
-                type="text"
-                class="form-control"
-                id="email"
-                placeholder="Email*"
-                name="email"
-                
-              />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6 form-item-2">
-              <p>Have you had a positive case of COVID-19 on your premises within the past 72 hrs?*</p>
-            </div>
-            <div class="col-sm-6">
-              <input
-              type="image"
-              border="0"
-              class="quote-2-yes"
-              id="tested-positive-yes"
-              src="ASSETS/quote/Asset_Yes_green.svg"
-              onmouseover="yes_img_hover(this)"
-              onmouseout="yes_img_unhover(this)"
-            />
-            <input
-            type="image"
-            border="0"
-            class="quote-2-no"
-            id="tested-positive-no"
-            src="ASSETS/quote/Asset_no_green7.svg"
-            onmouseover="no_img_hover(this)"
-            onmouseout="no_img_unhover(this)"
-          />
-
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6 form-item-2">
-              <p>Are you interested in arranging a scheduled (monthly) service agreement at a tailored rate?*</p>
-            </div>
-            <div class="col-sm-6">
-              <input
-              type="image"
-              border="0"
-              class="quote-2-yes"
-              id="interested-yes"
-              src="ASSETS/quote/Asset_Yes_green.svg"
-              onmouseover="yes_img_hover(this)"
-              onmouseout="yes_img_unhover(this)"
-            />
-            <input
-            type="image"
-            border="0"
-            class="quote-2-no"
-            id="interested-no"
-            src="ASSETS/quote/Asset_no_green7.svg"
-            onmouseover="no_img_hover(this)"
-            onmouseout="no_img_unhover(this)"
-          />
-              <input
-              type="image"
-              border="0"
-              class="quote-2-unsure"
-              id="interested-unsure"
-              src="ASSETS/quote/Asset_unsure_green.svg"
-              onmouseover="unsure_img_hover(this)"
-              onmouseout="unsure_img_unhover(this)"
-            />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-1 form-item"></div>
-            <div class="col-sm-1 form-item"></div>
-            <div class="col-sm-4 form-item">
-              <input name="_formsubmit_id" type="text" style="display: none;" />
-              <input
-                type="image"
-                alt="Submit"
-                border="0"
-                class="quote-submit"
-                src="ASSETS/quote/green.svg"
-                onmouseover="send_img_hover(this)"
-                onmouseout="send_img_unhover(this)"
-              />
-            </div>
-          </div>
+        <div class="col-sm-6 form-item-2">
+          <p>Have you had a positive case of COVID-19 on your premises within the past 72 hrs?*</p>
         </div>
-        <div class="col-sm-4"></div>
-      </div>
+        <div class="col-sm-6">
+          <input
+          type="image"
+          border="0"
+          class="quote-2-yes"
+          id="tested-positive-yes"
+          src="ASSETS/quote/Asset_Yes_green.svg"
+          onmouseover="yes_img_hover(this)"
+          onmouseout="yes_img_unhover(this)"
+        />
+        <input
+        type="image"
+        border="0"
+        class="quote-2-no"
+        id="tested-positive-no"
+        src="ASSETS/quote/Asset_no_green7.svg"
+        onmouseover="no_img_hover(this)"
+        onmouseout="no_img_unhover(this)"
+      />
 
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 form-item-2">
+          <p>Are you interested in arranging a scheduled (monthly) service agreement at a tailored rate?*</p>
+        </div>
+        <div class="col-sm-6">
+          <input
+          type="image"
+          border="0"
+          class="quote-2-yes"
+          id="interested-yes"
+          src="ASSETS/quote/Asset_Yes_green.svg"
+          onmouseover="yes_img_hover(this)"
+          onmouseout="yes_img_unhover(this)"
+        />
+        <input
+        type="image"
+        border="0"
+        class="quote-2-no"
+        id="interested-no"
+        src="ASSETS/quote/Asset_no_green7.svg"
+        onmouseover="no_img_hover(this)"
+        onmouseout="no_img_unhover(this)"
+      />
+          <input
+          type="image"
+          border="0"
+          class="quote-2-unsure"
+          id="interested-unsure"
+          src="ASSETS/quote/Asset_unsure_green.svg"
+          onmouseover="unsure_img_hover(this)"
+          onmouseout="unsure_img_unhover(this)"
+        />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-1 form-item"></div>
+        <div class="col-sm-1 form-item"></div>
+        <div class="col-sm-4 form-item">
+          <input name="_formsubmit_id" type="text" style="display: none;" />
+          <input
+            type="image"
+            alt="Submit"
+            border="0"
+            class="quote-submit"
+            src="ASSETS/quote/green.svg"
+            onmouseover="send_img_hover(this)"
+            onmouseout="send_img_unhover(this)"
+          />
+        </div>
+      </div>
       <div class="row quote-tagline">
         <div class="col-sm-10">
           <h1 class="custom-bold color-dark-blue">
@@ -1919,7 +1933,10 @@
           </h1>
         </div>
       </div>
+    </div>
+
     </form>
+    
     </div>
   </div>
 
