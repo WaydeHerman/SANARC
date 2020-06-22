@@ -736,6 +736,17 @@
     
   }
 
+  .quote-pdf {
+    
+    cursor: pointer;
+    position: relative;
+    top: -2px;
+  }
+
+  .quote-pdf img {
+    width: 15px;
+  }
+
   .quote-expand {
     cursor: pointer;
     background-color: #00edba;
@@ -1823,7 +1834,20 @@ input[type=number] {
           </div>
           <div class="row">
             <div class="col-sm-12">
-              <p>General rates guidelines and policies</p>
+              <p>General rates guidelines and policies   
+                <a class="quote-pdf"
+                href="ASSETS/files/SANARC_Covid-19_Pamphlet.pdf"
+                download
+                >    
+
+                <img
+                src="ASSETS/quote/Asset_PDF_button_Blue.svg"
+                onmouseover="pdf_img_hover(this)"
+                onmouseout="pdf_img_unhover(this)"
+                
+              />
+            </a>      
+          </p>
             </div>
           </div>
           <div class="row">
@@ -2213,6 +2237,14 @@ input[type=number] {
 
     function unsure_img_unhover(element) {
       element.setAttribute("src", "ASSETS/quote/Asset_unsure_green.svg");
+    }
+
+    function pdf_img_hover(element) {
+      element.setAttribute("src", "ASSETS/quote/Asset_PDF_button_White.svg");
+    }
+
+    function pdf_img_unhover(element) {
+      element.setAttribute("src", "ASSETS/quote/Asset_PDF_button_Blue.svg");
     }
 
     function custom_close() {
